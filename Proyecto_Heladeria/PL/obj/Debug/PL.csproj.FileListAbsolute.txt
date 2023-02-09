@@ -1,0 +1,9 @@
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.csproj.AssemblyReference.cache
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.Properties.Resources.resources
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.csproj.GenerateResource.cache
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\PL.exe.config
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\PL.exe
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\PL.pdb
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.exe
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.pdb
