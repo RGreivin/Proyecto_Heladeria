@@ -7,3 +7,5 @@ C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\P
 C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\PL.pdb
 C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.exe
 C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.pdb
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.Pantalla.Inicio.resources
+C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.Pantalla.Login.resources
