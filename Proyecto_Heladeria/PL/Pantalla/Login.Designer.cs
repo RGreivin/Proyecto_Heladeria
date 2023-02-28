@@ -34,15 +34,15 @@ namespace PL.Pantalla
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_User = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Txt_passw = new System.Windows.Forms.TextBox();
+            this.ShowPassw = new System.Windows.Forms.CheckBox();
             this.Btn_Ingresar = new System.Windows.Forms.Button();
             this.link_RecuperarAcceso = new System.Windows.Forms.LinkLabel();
             this.btn_Registrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,7 +72,7 @@ namespace PL.Pantalla
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.Btn_Salir);
             this.panel2.Location = new System.Drawing.Point(-1, 540);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(422, 45);
@@ -90,14 +90,14 @@ namespace PL.Pantalla
             this.label2.TabIndex = 2;
             this.label2.Text = "Usuario:";
             // 
-            // textBox1
+            // Txt_User
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(96, 263);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 22);
-            this.textBox1.TabIndex = 3;
+            this.Txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_User.Location = new System.Drawing.Point(96, 263);
+            this.Txt_User.Name = "Txt_User";
+            this.Txt_User.Size = new System.Drawing.Size(232, 22);
+            this.Txt_User.TabIndex = 3;
             // 
             // label3
             // 
@@ -111,27 +111,29 @@ namespace PL.Pantalla
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña:";
             // 
-            // textBox2
+            // Txt_passw
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(96, 354);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 22);
-            this.textBox2.TabIndex = 5;
+            this.Txt_passw.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_passw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_passw.Location = new System.Drawing.Point(96, 354);
+            this.Txt_passw.Name = "Txt_passw";
+            this.Txt_passw.Size = new System.Drawing.Size(232, 22);
+            this.Txt_passw.TabIndex = 5;
+            this.Txt_passw.UseSystemPasswordChar = true;
             // 
-            // checkBox1
+            // ShowPassw
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.checkBox1.Location = new System.Drawing.Point(135, 397);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(144, 20);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Mostrar Contraseña";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.ShowPassw.AutoSize = true;
+            this.ShowPassw.BackColor = System.Drawing.Color.Transparent;
+            this.ShowPassw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowPassw.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.ShowPassw.Location = new System.Drawing.Point(166, 398);
+            this.ShowPassw.Name = "ShowPassw";
+            this.ShowPassw.Size = new System.Drawing.Size(160, 22);
+            this.ShowPassw.TabIndex = 6;
+            this.ShowPassw.Text = "Mostrar Contraseña";
+            this.ShowPassw.UseVisualStyleBackColor = false;
+            this.ShowPassw.CheckedChanged += new System.EventHandler(this.ShowPassw_CheckedChanged);
             // 
             // Btn_Ingresar
             // 
@@ -151,6 +153,7 @@ namespace PL.Pantalla
             this.Btn_Ingresar.TabIndex = 9;
             this.Btn_Ingresar.Text = "Ingresar";
             this.Btn_Ingresar.UseVisualStyleBackColor = false;
+            this.Btn_Ingresar.Click += new System.EventHandler(this.Btn_Ingresar_Click);
             // 
             // link_RecuperarAcceso
             // 
@@ -166,6 +169,7 @@ namespace PL.Pantalla
             this.link_RecuperarAcceso.TabIndex = 14;
             this.link_RecuperarAcceso.TabStop = true;
             this.link_RecuperarAcceso.Text = "Recuperar usuario / contraseña";
+            this.link_RecuperarAcceso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_RecuperarAcceso_LinkClicked);
             // 
             // btn_Registrar
             // 
@@ -185,6 +189,7 @@ namespace PL.Pantalla
             this.btn_Registrar.TabIndex = 13;
             this.btn_Registrar.Text = "Registrarse";
             this.btn_Registrar.UseVisualStyleBackColor = false;
+            this.btn_Registrar.Click += new System.EventHandler(this.btn_Registrar_Click);
             // 
             // pictureBox1
             // 
@@ -196,20 +201,21 @@ namespace PL.Pantalla
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // Btn_Salir
             // 
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.Btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Salir.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Salir.Image")));
+            this.Btn_Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Salir.Location = new System.Drawing.Point(6, 5);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(156, 35);
+            this.Btn_Salir.TabIndex = 0;
+            this.Btn_Salir.Text = "Salir";
+            this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // Login
             // 
@@ -221,10 +227,10 @@ namespace PL.Pantalla
             this.Controls.Add(this.link_RecuperarAcceso);
             this.Controls.Add(this.btn_Registrar);
             this.Controls.Add(this.Btn_Ingresar);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ShowPassw);
+            this.Controls.Add(this.Txt_passw);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Txt_User);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -247,14 +253,14 @@ namespace PL.Pantalla
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_User;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox Txt_passw;
+        private System.Windows.Forms.CheckBox ShowPassw;
         private System.Windows.Forms.Button Btn_Ingresar;
         private System.Windows.Forms.LinkLabel link_RecuperarAcceso;
         private System.Windows.Forms.Button btn_Registrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Salir;
     }
 }
