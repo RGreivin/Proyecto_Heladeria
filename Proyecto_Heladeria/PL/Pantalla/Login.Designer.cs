@@ -54,7 +54,7 @@ namespace PL.Pantalla
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(549, 45);
+            this.panel1.Size = new System.Drawing.Size(422, 45);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -62,7 +62,7 @@ namespace PL.Pantalla
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(126, 6);
+            this.label1.Location = new System.Drawing.Point(129, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 31);
             this.label1.TabIndex = 0;
@@ -127,7 +127,7 @@ namespace PL.Pantalla
             this.ShowPassw.BackColor = System.Drawing.Color.Transparent;
             this.ShowPassw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowPassw.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.ShowPassw.Location = new System.Drawing.Point(166, 398);
+            this.ShowPassw.Location = new System.Drawing.Point(134, 393);
             this.ShowPassw.Name = "ShowPassw";
             this.ShowPassw.Size = new System.Drawing.Size(160, 22);
             this.ShowPassw.TabIndex = 6;
@@ -147,7 +147,7 @@ namespace PL.Pantalla
             this.Btn_Ingresar.ForeColor = System.Drawing.Color.White;
             this.Btn_Ingresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ingresar.Image")));
             this.Btn_Ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Ingresar.Location = new System.Drawing.Point(222, 446);
+            this.Btn_Ingresar.Location = new System.Drawing.Point(221, 445);
             this.Btn_Ingresar.Name = "Btn_Ingresar";
             this.Btn_Ingresar.Size = new System.Drawing.Size(189, 38);
             this.Btn_Ingresar.TabIndex = 9;
@@ -163,7 +163,7 @@ namespace PL.Pantalla
             this.link_RecuperarAcceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_RecuperarAcceso.ForeColor = System.Drawing.Color.Transparent;
             this.link_RecuperarAcceso.LinkColor = System.Drawing.SystemColors.HotTrack;
-            this.link_RecuperarAcceso.Location = new System.Drawing.Point(104, 506);
+            this.link_RecuperarAcceso.Location = new System.Drawing.Point(104, 504);
             this.link_RecuperarAcceso.Name = "link_RecuperarAcceso";
             this.link_RecuperarAcceso.Size = new System.Drawing.Size(216, 18);
             this.link_RecuperarAcceso.TabIndex = 14;
@@ -194,7 +194,7 @@ namespace PL.Pantalla
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(122, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(123, 65);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -29,10 +29,17 @@ namespace PL.Pantalla
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Recuperar_Dtos
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(702, 450);
+            this.Name = "Recuperar_Dtos";
             this.Text = "Recuperar_Dtos";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
