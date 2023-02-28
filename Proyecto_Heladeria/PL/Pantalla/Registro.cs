@@ -26,7 +26,7 @@ namespace PL.Pantalla
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (!(Txt_Ced.Text.Equals("") || Txt_User.Text.Equals("") || txt_Passw.Text.Equals("")))
+            if (!(Txt_Ced.Text.Equals("") || txt_Name.Text.Equals("")|| Txt_Apellidos.Text.Equals("") || Txt_User.Text.Equals("") || Txt_Paassw.Text.Equals("")))
             {
            
                 MessageBox.Show("Datos Guardados, Regreses a la pagina anterior.");
@@ -40,12 +40,12 @@ namespace PL.Pantalla
         {
             if (ShowPassw.Checked)
             {
-                txt_Passw.UseSystemPasswordChar = false;
+                Txt_Paassw.UseSystemPasswordChar = false;
 
             }
             else
             {
-                txt_Passw.UseSystemPasswordChar = true;
+                Txt_Paassw.UseSystemPasswordChar = true;
             }
         }
         #endregion
