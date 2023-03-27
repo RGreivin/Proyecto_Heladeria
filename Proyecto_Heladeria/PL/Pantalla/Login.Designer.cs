@@ -29,10 +29,12 @@ namespace PL.Pantalla
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Btn_Salir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_User = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +44,7 @@ namespace PL.Pantalla
             this.link_RecuperarAcceso = new System.Windows.Forms.LinkLabel();
             this.btn_Registrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btn_Salir = new System.Windows.Forms.Button();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,9 +54,10 @@ namespace PL.Pantalla
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(422, 45);
+            this.panel1.Size = new System.Drawing.Size(421, 45);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -73,10 +76,27 @@ namespace PL.Pantalla
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel2.Controls.Add(this.Btn_Salir);
-            this.panel2.Location = new System.Drawing.Point(-1, 540);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 540);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 45);
+            this.panel2.Size = new System.Drawing.Size(421, 45);
             this.panel2.TabIndex = 1;
+            // 
+            // Btn_Salir
+            // 
+            this.Btn_Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.Btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Salir.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Salir.Image")));
+            this.Btn_Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Salir.Location = new System.Drawing.Point(6, 5);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(156, 35);
+            this.Btn_Salir.TabIndex = 0;
+            this.Btn_Salir.Text = "Salir";
+            this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // label2
             // 
@@ -203,21 +223,12 @@ namespace PL.Pantalla
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // Btn_Salir
+            // bunifuDragControl1
             // 
-            this.Btn_Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Salir.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Salir.Image")));
-            this.Btn_Salir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Salir.Location = new System.Drawing.Point(6, 5);
-            this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(156, 35);
-            this.Btn_Salir.TabIndex = 0;
-            this.Btn_Salir.Text = "Salir";
-            this.Btn_Salir.UseVisualStyleBackColor = true;
-            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // Login
             // 
@@ -264,5 +275,6 @@ namespace PL.Pantalla
         private System.Windows.Forms.Button btn_Registrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Btn_Salir;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

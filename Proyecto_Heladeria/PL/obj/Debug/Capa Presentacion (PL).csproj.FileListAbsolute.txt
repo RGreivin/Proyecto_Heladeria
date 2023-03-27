@@ -18,3 +18,6 @@ C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\ob
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\Capa Presentacion (PL).csproj.CopyComplete
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.exe
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.pdb
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\Capa Soporte.dll
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\Capa Soporte.pdb

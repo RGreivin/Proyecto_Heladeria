@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-
+using Capa_Soporte.Cache;
 namespace DAL.ConexionBD
 {
     //Esta clase hereda de la clase conexion
@@ -28,11 +28,18 @@ namespace DAL.ConexionBD
                     command.CommandText = "LoginEmpleados";
                     command.Parameters.AddWithValue("@Usuario", user);
                     command.Parameters.AddWithValue("@Password", passw);
-                    //command.Parameters.AddWithValue("@Rol", rol);
                     command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader rd = command.ExecuteReader();
                     if (rd.HasRows)
                     {
+                        while (rd.Read())
+                        {
+                            //agregamos los valores a la clase statica 
+                            //Estos datos permaneceran en menoria
+                            cacheLogin.nombre = rd.GetString(0);
+                            cacheLogin.apellidos = rd.GetString(1);
+                            cacheLogin.rol = rd.GetString(2);
+                        }
                         return true;
                     }
                     else

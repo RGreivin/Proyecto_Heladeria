@@ -56,7 +56,7 @@ namespace PL.Pantalla
                 {
                     Pantalla.Principal form_Princ = new Pantalla.Principal();
                     form_Princ.Show();
-                    Dispose();
+                    Hide();
                 }
                 else
                 {

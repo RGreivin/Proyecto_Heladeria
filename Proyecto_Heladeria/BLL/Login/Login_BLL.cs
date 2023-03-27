@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.ConexionBD;
+using Capa_Soporte.Cache;
 namespace BLL.Login
 {
     public class Login_BLL
@@ -15,5 +16,15 @@ namespace BLL.Login
             return dtos_Users.login(user, pass);
 
         }
+        //Cambiar el logueo
+        //public bool editUser(string user, string pass)
+        //{
+        //    if (user == cacheLogin.user)
+        //    {
+
+        //    }
+        //    return true;
+
+        //}
     }
 }

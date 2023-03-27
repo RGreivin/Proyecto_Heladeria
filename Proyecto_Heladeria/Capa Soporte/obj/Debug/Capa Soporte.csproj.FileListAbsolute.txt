@@ -1,0 +1,6 @@
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\Capa Soporte\bin\Debug\Capa Soporte.dll
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\Capa Soporte\bin\Debug\Capa Soporte.pdb
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\Capa Soporte\obj\Debug\Capa Soporte.csproj.AssemblyReference.cache
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\Capa Soporte\obj\Debug\Capa Soporte.csproj.CoreCompileInputs.cache
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\Capa Soporte\obj\Debug\Capa Soporte.dll
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\Capa Soporte\obj\Debug\Capa Soporte.pdb

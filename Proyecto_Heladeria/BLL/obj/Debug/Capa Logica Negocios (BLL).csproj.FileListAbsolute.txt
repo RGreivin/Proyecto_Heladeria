@@ -7,3 +7,5 @@ C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\o
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\Capa Logica Negocios (BLL).csproj.CopyComplete
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.dll
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.pdb
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\bin\Debug\Capa Soporte.dll
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\bin\Debug\Capa Soporte.pdb

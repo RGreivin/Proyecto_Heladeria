@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\OneDrive\Email attachments\Documentos\Materia-UAM\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -132,6 +137,10 @@
     <ProjectReference Include="..\BLL\Capa Logica Negocios %28BLL%29.csproj">
       <Project>{9e9659d6-f6e0-425f-abe0-842c3028fcf4}</Project>
       <Name>Capa Logica Negocios %28BLL%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa Soporte\Capa Soporte.csproj">
+      <Project>{743a5826-2000-4d35-bf5c-bc3010a9c0d8}</Project>
+      <Name>Capa Soporte</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\Capa Acceso Datos %28DAL%29.csproj">
       <Project>{75ad325c-c7fc-4063-bb1d-f171674a8c1d}</Project>
