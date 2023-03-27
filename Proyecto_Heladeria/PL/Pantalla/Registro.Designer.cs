@@ -46,6 +46,10 @@ namespace PL.Pantalla
             this.Txt_Apellidos = new System.Windows.Forms.TextBox();
             this.Txt_User = new System.Windows.Forms.TextBox();
             this.Txt_Paassw = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,11 +66,11 @@ namespace PL.Pantalla
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(86, 6);
+            this.label1.Location = new System.Drawing.Point(84, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 31);
+            this.label1.Size = new System.Drawing.Size(254, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de Usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,7 +80,7 @@ namespace PL.Pantalla
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel2.Controls.Add(this.Btn_Regresar);
             this.panel2.Controls.Add(this.Btn_Guardar);
-            this.panel2.Location = new System.Drawing.Point(2, 414);
+            this.panel2.Location = new System.Drawing.Point(2, 499);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(397, 54);
             this.panel2.TabIndex = 2;
@@ -126,7 +130,8 @@ namespace PL.Pantalla
             this.Btn_Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.Btn_Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
             this.Btn_Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Regresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Regresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Regresar.ForeColor = System.Drawing.Color.White;
             this.Btn_Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Regresar.Image")));
             this.Btn_Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Regresar.Location = new System.Drawing.Point(11, 9);
@@ -145,7 +150,8 @@ namespace PL.Pantalla
             this.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.Btn_Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Guardar.ForeColor = System.Drawing.Color.White;
             this.Btn_Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guardar.Image")));
             this.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Guardar.Location = new System.Drawing.Point(251, 9);
@@ -161,7 +167,7 @@ namespace PL.Pantalla
             this.ShowPassw.AutoSize = true;
             this.ShowPassw.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowPassw.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ShowPassw.Location = new System.Drawing.Point(212, 353);
+            this.ShowPassw.Location = new System.Drawing.Point(210, 354);
             this.ShowPassw.Name = "ShowPassw";
             this.ShowPassw.Size = new System.Drawing.Size(144, 20);
             this.ShowPassw.TabIndex = 11;
@@ -204,8 +210,9 @@ namespace PL.Pantalla
             // 
             // txt_Name
             // 
+            this.txt_Name.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txt_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Name.Cursor = System.Windows.Forms.Cursors.No;
+            this.txt_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Name.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Name.Location = new System.Drawing.Point(168, 156);
             this.txt_Name.Name = "txt_Name";
@@ -240,12 +247,58 @@ namespace PL.Pantalla
             this.Txt_Paassw.TabIndex = 18;
             this.Txt_Paassw.UseSystemPasswordChar = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Italic);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(12, 385);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 29);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Correo:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(168, 395);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(186, 16);
+            this.textBox1.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Italic);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(12, 440);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 29);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Telefono:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(168, 450);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(186, 16);
+            this.textBox2.TabIndex = 22;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(399, 469);
+            this.ClientSize = new System.Drawing.Size(399, 554);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Txt_Paassw);
             this.Controls.Add(this.Txt_User);
             this.Controls.Add(this.Txt_Apellidos);
@@ -289,5 +342,9 @@ namespace PL.Pantalla
         private System.Windows.Forms.TextBox Txt_Apellidos;
         private System.Windows.Forms.TextBox Txt_User;
         private System.Windows.Forms.TextBox Txt_Paassw;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

@@ -16,5 +16,13 @@ namespace PL.Pantalla
         {
             InitializeComponent();
         }
+        #region Config de botones
+        private void Btn_Regresar_Click(object sender, EventArgs e)
+        {
+            Pantalla.Login back = new Login();
+            back.Show();
+            Dispose();
+        }
+        #endregion
     }
 }

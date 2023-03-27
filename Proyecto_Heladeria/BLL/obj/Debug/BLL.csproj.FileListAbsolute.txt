@@ -4,3 +4,12 @@ C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\
 C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.dll
 C:\Users\andre\source\repos\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.pdb
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\bin\Debug\BLL.dll
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\bin\Debug\BLL.pdb
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\bin\Debug\DAL.dll
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\bin\Debug\DAL.pdb
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.dll
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\BLL\obj\Debug\BLL.pdb

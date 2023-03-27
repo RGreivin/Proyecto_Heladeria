@@ -137,7 +137,7 @@ namespace PL.Pantalla
             // 
             // Btn_Ingresar
             // 
-            this.Btn_Ingresar.BackColor = System.Drawing.Color.Red;
+            this.Btn_Ingresar.BackColor = System.Drawing.Color.SteelBlue;
             this.Btn_Ingresar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.Btn_Ingresar.FlatAppearance.BorderSize = 0;
             this.Btn_Ingresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
@@ -146,12 +146,14 @@ namespace PL.Pantalla
             this.Btn_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ingresar.ForeColor = System.Drawing.Color.White;
             this.Btn_Ingresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ingresar.Image")));
-            this.Btn_Ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Ingresar.Location = new System.Drawing.Point(221, 445);
+            this.Btn_Ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btn_Ingresar.Location = new System.Drawing.Point(240, 446);
             this.Btn_Ingresar.Name = "Btn_Ingresar";
-            this.Btn_Ingresar.Size = new System.Drawing.Size(189, 38);
+            this.Btn_Ingresar.Padding = new System.Windows.Forms.Padding(10, 0, 15, 0);
+            this.Btn_Ingresar.Size = new System.Drawing.Size(155, 38);
             this.Btn_Ingresar.TabIndex = 9;
             this.Btn_Ingresar.Text = "Ingresar";
+            this.Btn_Ingresar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Ingresar.UseVisualStyleBackColor = false;
             this.Btn_Ingresar.Click += new System.EventHandler(this.Btn_Ingresar_Click);
             // 
@@ -183,9 +185,9 @@ namespace PL.Pantalla
             this.btn_Registrar.ForeColor = System.Drawing.Color.White;
             this.btn_Registrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Registrar.Image")));
             this.btn_Registrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Registrar.Location = new System.Drawing.Point(8, 446);
+            this.btn_Registrar.Location = new System.Drawing.Point(30, 446);
             this.btn_Registrar.Name = "btn_Registrar";
-            this.btn_Registrar.Size = new System.Drawing.Size(189, 38);
+            this.btn_Registrar.Size = new System.Drawing.Size(169, 38);
             this.btn_Registrar.TabIndex = 13;
             this.btn_Registrar.Text = "Registrarse";
             this.btn_Registrar.UseVisualStyleBackColor = false;
@@ -194,9 +196,9 @@ namespace PL.Pantalla
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(123, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(124, 66);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 137);
+            this.pictureBox1.Size = new System.Drawing.Size(170, 151);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;

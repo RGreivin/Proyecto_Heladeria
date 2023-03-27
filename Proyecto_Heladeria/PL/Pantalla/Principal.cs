@@ -15,6 +15,8 @@ namespace PL.Pantalla
         public Principal()
         {
             InitializeComponent();
+            
+
         }
     }
 }

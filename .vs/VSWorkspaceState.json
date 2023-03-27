@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Proyecto_Heladeria",
+    "\\Proyecto_Heladeria\\PL",
+    "\\Proyecto_Heladeria\\PL\\Pantalla"
   ],
-  "SelectedNode": "\\Proyecto_Heladeria.sln",
+  "SelectedNode": "\\Proyecto_Heladeria\\PL\\Pantalla\\Inicio.resx",
   "PreviewInSolutionExplorer": false
 }

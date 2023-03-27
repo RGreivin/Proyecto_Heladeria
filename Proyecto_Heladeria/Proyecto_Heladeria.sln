@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{9E9659D6-F6E0-425F-ABE0-842C3028FCF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa Logica Negocios (BLL)", "BLL\Capa Logica Negocios (BLL).csproj", "{9E9659D6-F6E0-425F-ABE0-842C3028FCF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{75AD325C-C7FC-4063-BB1D-F171674A8C1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa Acceso Datos (DAL)", "DAL\Capa Acceso Datos (DAL).csproj", "{75AD325C-C7FC-4063-BB1D-F171674A8C1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL", "PL\PL.csproj", "{F1CD3550-53F3-4094-B915-5B89B38C4824}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa Presentacion (PL)", "PL\Capa Presentacion (PL).csproj", "{F1CD3550-53F3-4094-B915-5B89B38C4824}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
