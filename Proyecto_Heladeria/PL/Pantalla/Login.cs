@@ -43,7 +43,7 @@ namespace PL.Pantalla
             {
 
                 MessageBox.Show("No dejes campos vacios", "Informative messages ",
-                   MessageBoxButtons.OK, MessageBoxIcon.Question);
+                   MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -51,7 +51,7 @@ namespace PL.Pantalla
                 Login_BLL log = new Login_BLL();
                 //var implicita
                 var valid_Login = log.Dtos_Login(Txt_User.Text, Txt_passw.Text);
-                //Validamos que dtos sean exitan 
+                //Validamos que dtos  exitan 
                 if (valid_Login == true)
                 {
                     Pantalla.Principal form_Princ = new Pantalla.Principal();
@@ -60,7 +60,6 @@ namespace PL.Pantalla
                 }
                 else
                 {
-
                     MessageBox.Show("Los datos no son correctos", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
