@@ -84,13 +84,10 @@ namespace PL.Pantalla
         {
             ValidarUser();
         }
-
         private void Passw_TextChanged(object sender, EventArgs e)
         {
             ValidarPassword();
-
         }
-
         private void Correo_TextChanged(object sender, EventArgs e)
         {
             ValidarEmail(Correo.Text);
@@ -143,10 +140,7 @@ namespace PL.Pantalla
                 MessageBox.Show("Datos Guardados, Regreses a la pagina anterior.");
             }
 
-
-
-
-            }
+         }
         private void Regresar()
         {
             Pantalla.Login back = new Pantalla.Login();
@@ -230,10 +224,6 @@ namespace PL.Pantalla
                 }
                 
             }
-
-
         #endregion termina los metodos genericos
-
-       
     }
 }
