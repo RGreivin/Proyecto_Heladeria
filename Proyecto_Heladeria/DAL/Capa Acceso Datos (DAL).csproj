@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ConexionBD\AccesoDtosUser.cs" />
     <Compile Include="ConexionBD\ConectarBD.cs" />
+    <Compile Include="ConexionBD\RegistroDtosUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

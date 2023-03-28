@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,29 +12,25 @@ namespace DAL.ConexionBD
      * La clase abstract no puede ser instanciada,
      * solo se puede acceder como una clase base
      */
-    public abstract class ConectarBD
+    public  class ConectarBD
     {
-        /*
-         * Declaramos una variable privada de solo lectura
-         * de tipo string para la cadena de conexion
-         */
-        private readonly string conectionString;
+        //Conexion ANDREY-Laptop
+        private SqlConnection Cn = new SqlConnection("Data Source=LAPTOP-ANDREY;Initial Catalog=AlturaPolar_v2;Integrated Security=True");
 
-        //creamos el constructor e inicializamos la cadena de conexion
-        public ConectarBD()
+        public SqlConnection AbrirConexion()
         {
-            conectionString = "Data Source=LAPTOP-ANDREY;Initial Catalog=AlturaPolar_v2;Integrated Security=True";
-        }
-        /*
-         * Creamos un metodo protegido tipo conexion para
-         * obtener la cadena de conexion 
-         */
-        protected SqlConnection GetSqlConnection()
-        {
-            return new SqlConnection(conectionString);
+
+            if (Cn.State == ConnectionState.Closed)
+                Cn.Open();
+            return Cn;
         }
 
+        public SqlConnection CerrarConexion()
+        {
+            if (Cn.State == ConnectionState.Open)
+                Cn.Close();
+            return Cn;
 
+        }
     }
 }
-

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL.Login;
+using Capa_Soporte.Cache;
 
 namespace PL.Pantalla
 {
@@ -104,27 +105,26 @@ namespace PL.Pantalla
 
                 MessageBox.Show("No dejes campos vacios", "Informative messages ",
                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            }        
             else
             {
+                    Login_BLL log = new Login_BLL();
+                    //var implicita
+                    var valid_Login = log.Dtos_Login(User.Text, Passw.Text);
+                    //Validamos que dtos  exitan 
+                    if (valid_Login == true && CacheLogin.Rol !="")
+                    {
+                        Pantalla.Principal form_Princ = new Pantalla.Principal();
+                        form_Princ.Show();
+                        Hide();
+                    }else{
 
-                Login_BLL log = new Login_BLL();
-                //var implicita
-                var valid_Login = log.Dtos_Login(User.Text, Passw.Text);
-                //Validamos que dtos  exitan 
-                if (valid_Login == true)
-                {
-                    Pantalla.Principal form_Princ = new Pantalla.Principal();
-                    form_Princ.Show();
-                    Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Los datos no son correctos", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Los datos no son correctos, o no cuentas con un rol asignado", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Limpiartext();
-                }
-
+                    }
+               
             }
+           
         }
         private void Registrar()
         {

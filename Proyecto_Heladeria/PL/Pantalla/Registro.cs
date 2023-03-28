@@ -8,11 +8,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL.Registro;
 
 namespace PL.Pantalla
 {
     public partial class Registro : Form
     {
+        //Instanciamos la clase
+        RegistroUser v_ins = new RegistroUser();
         public Registro()
         {
             InitializeComponent();
@@ -137,10 +140,24 @@ namespace PL.Pantalla
                     Lbl_Message.Text = "Correo Electronico valido";
                     Lbl_Message.ForeColor = Color.Green;
                 }
+                v_ins.Registro(Ced.Text,Nombre.Text,Apellidos.Text,User.Text,Passw.Text,Correo.Text,Telefono.Text,"");
                 MessageBox.Show("Datos Guardados, Regreses a la pagina anterior.");
+                LimpiarCampos();
             }
 
          }
+        private void LimpiarCampos()
+        {
+            Ced.Clear();
+            Nombre.Clear();
+            Apellidos.Clear();
+            User.Clear();
+            Passw.Clear();
+            Correo.Clear();
+            Telefono.Clear();
+            Lbl_Message.Visible = false;
+
+        }
         private void Regresar()
         {
             Pantalla.Login back = new Pantalla.Login();
@@ -150,7 +167,7 @@ namespace PL.Pantalla
 
         private void ValidarNombres()
         {
-            if (Regex.IsMatch(Nombre.Text, @"[^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$"))
+            if (Regex.IsMatch(Nombre.Text, @"^[a-zA-Z]+(([\'\,\.\- ]{2,}[a-zA-Z ])?[a-zA-Z]*)*$"))
             {
                 Lbl_Message.Text = "Nombre Correcto";
             }
@@ -225,5 +242,59 @@ namespace PL.Pantalla
                 
             }
         #endregion termina los metodos genericos
+
+        #region metodos handler del evento enter
+
+        private void Txt_Enter(object sender, EventArgs e)
+        {
+            //Hace referencia al objeto que dispara el evento
+            //En este caso el textbox que esta activo
+            TextBox txt = sender as TextBox;
+            //Recorremos todos los controles que se encuentran dentro del panel
+            foreach (Control ctrl in pContaniner.Controls)
+            {
+                /*
+                 * Si es un Panel y el nombre del Panel es "p"
+                 * concatenamos el name del textbox 
+                 */
+                if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
+                {
+                    ctrl.BackColor = Color.Gold;
+                }
+            }
+        }
+            private void Txt_Leave(object sender, EventArgs e)
+            {
+                //Hace referencia al objeto que dispara el evento
+                //En este caso el textbox que esta activo
+                TextBox txt = sender as TextBox;
+
+                //Recorremos todos los controles que se encuentran dentro del panel
+                foreach (Control ctrl in pContaniner.Controls)
+                {
+                    /*
+                     * Si es un Panel y el nombre del Panel es "p"
+                     * concatenamos el name del textbox 
+                     */
+                    if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
+                    {
+                        if (txt.Text == string.Empty)
+                        {
+                            ctrl.BackColor = Color.Red;
+                        }
+                        else
+                        {
+                            //cambiar el color
+                            ctrl.BackColor = Color.DarkGray;
+                        }
+                    }
+                }
+            }
+
+
+
+        #endregion Termina handler del evento enter
+
+        
     }
-}
+    }

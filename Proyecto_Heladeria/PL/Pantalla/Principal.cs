@@ -51,6 +51,7 @@ namespace PL.Pantalla
         {
             Application.Exit();
         }
+      
         private void MenuLateral()
         {
             if (Panel_Options.Width == 60)
