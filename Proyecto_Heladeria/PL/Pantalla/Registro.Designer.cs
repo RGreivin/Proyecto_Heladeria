@@ -301,6 +301,8 @@ namespace PL.Pantalla
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(203, 22);
             this.Telefono.TabIndex = 22;
+            this.Telefono.TextChanged += new System.EventHandler(this.Telefono_TextChanged);
+            this.Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Telefono_KeyPress);
             // 
             // bunifuDragControl1
             // 

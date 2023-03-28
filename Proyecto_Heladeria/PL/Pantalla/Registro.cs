@@ -22,7 +22,7 @@ namespace PL.Pantalla
             this.Tt_Message.SetToolTip(this.User, "El usuario tiene que ser de 6 a 12 dígitos y solo puede contener numeros, letras y guion bajo.");
             this.Tt_Message.SetToolTip(this.Passw, "La contraseña tiene que ser de 8 a 16 dígitos y solo puede contener numeros, letras y guion bajo.");
             this.Tt_Message.SetToolTip(this.Correo, "Tiene que ser un correo valido");
-            this.Tt_Message.SetToolTip(this.Apellidos, "Solo se permiten números");
+            this.Tt_Message.SetToolTip(this.Telefono, "Formato del campo del telefono 40206587");
         }
         #region Metodos del sistema
         private void Btn_Regresar_Click(object sender, EventArgs e)
@@ -95,6 +95,18 @@ namespace PL.Pantalla
         {
             ValidarEmail(Correo.Text);
         }
+
+        private void Telefono_TextChanged(object sender, EventArgs e)
+        {
+            ValidarTelefono();
+        }
+        private void Telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         #endregion termina metodos del sistema
 
         #region Metodos genericos
@@ -144,7 +156,7 @@ namespace PL.Pantalla
 
         private void ValidarNombres()
         {
-            if (Regex.IsMatch(Nombre.Text, @"^[a-zA-Z]+$"))
+            if (Regex.IsMatch(Nombre.Text, @"[^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$"))
             {
                 Lbl_Message.Text = "Nombre Correcto";
             }
@@ -155,7 +167,7 @@ namespace PL.Pantalla
         }
         private void ValidarApellido()
         {
-            if (Regex.IsMatch(Apellidos.Text, @"^[a-zA-Z]+$"))
+            if (Regex.IsMatch(Apellidos.Text, @"^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$"))
             {
                 Lbl_Message.Text = "Apellido Correctos";
             }
@@ -205,11 +217,23 @@ namespace PL.Pantalla
             {
                 return false;
             }
+        }
+            private void ValidarTelefono()
+            {
+                if (Regex.IsMatch(Telefono.Text, @"^[5-9]\d{3}-?\d{4}$"))
+                {
+                    Lbl_Message.Text = "Telefono Correcto";
+                }
+                else
+                {
+                    Lbl_Message.Text = "Telefono Incorrecto";
+                }
+                
+            }
 
-}
 
         #endregion termina los metodos genericos
 
-      
+       
     }
 }
