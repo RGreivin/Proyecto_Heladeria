@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Capa_Soporte.Cache
 {
-    public static class cacheLogin
+    public static class CacheLogin
     {
-        public static string nombre { get; set; }
-        public static string apellidos { get; set; }
-        public static string rol { get; set; }
+        public static string Nombre { get; set; }
+        public static string Apellidos { get; set; }
+        public static string Rol { get; set; }
     }
 }

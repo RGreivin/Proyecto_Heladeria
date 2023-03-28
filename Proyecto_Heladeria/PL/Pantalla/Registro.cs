@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,41 +16,200 @@ namespace PL.Pantalla
         public Registro()
         {
             InitializeComponent();
+            this.Tt_Message.SetToolTip(this.Ced, "Solo se permiten números.");
+            this.Tt_Message.SetToolTip(this.Nombre, "Solo se permiten letras");
+            this.Tt_Message.SetToolTip(this.Apellidos, "Solo se permite letras");
+            this.Tt_Message.SetToolTip(this.User, "El usuario tiene que ser de 6 a 12 dígitos y solo puede contener numeros, letras y guion bajo.");
+            this.Tt_Message.SetToolTip(this.Passw, "La contraseña tiene que ser de 8 a 16 dígitos y solo puede contener numeros, letras y guion bajo.");
+            this.Tt_Message.SetToolTip(this.Correo, "Tiene que ser un correo valido");
+            this.Tt_Message.SetToolTip(this.Apellidos, "Solo se permiten números");
         }
-        #region Config botones
+        #region Metodos del sistema
         private void Btn_Regresar_Click(object sender, EventArgs e)
+        {
+            Regresar();
+        }
+
+        private void Btn_Guardar_Click(object sender, EventArgs e)
+        {
+
+            GuardarDtos();
+
+        }
+        private void ShowPassw_CheckedChanged(object sender, EventArgs e)
+        {
+            MostrarPassw();
+        }
+        //Texbox Numerico
+        private void Ced_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void Name_TextChanged(object sender, EventArgs e)
+        {
+            ValidarNombres();
+
+        }
+        private void Nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+
+            {
+                e.Handled = true;
+
+                return;
+
+            }
+
+        }
+        private void Apellidos_TextChanged(object sender, EventArgs e)
+        {
+            ValidarApellido();
+        }
+        private void Apellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+
+            {
+                e.Handled = true;
+
+                return;
+
+            }
+        }
+        private void User_TextChanged(object sender, EventArgs e)
+        {
+            ValidarUser();
+        }
+
+        private void Passw_TextChanged(object sender, EventArgs e)
+        {
+            ValidarPassword();
+
+        }
+
+        private void Correo_TextChanged(object sender, EventArgs e)
+        {
+            ValidarEmail(Correo.Text);
+        }
+        #endregion termina metodos del sistema
+
+        #region Metodos genericos
+        private void MostrarPassw()
+        {
+            if (ShowPassw.Checked)
+            {
+                Passw.UseSystemPasswordChar = false;
+
+            }
+            else
+            {
+                Passw.UseSystemPasswordChar = true;
+            }
+        }
+        private void GuardarDtos()
+        {
+            if (Ced.Text=="" || Nombre.Text=="" || Apellidos.Text=="" || User.Text=="" || Passw.Text==""|| Correo.Text=="" || Telefono.Text=="")
+            {
+                MessageBox.Show("No dejes campos vacios.");
+            }
+            else
+            {
+                if (ValidarEmail(Correo.Text) == false)
+                {
+                    Lbl_Message.Text = "Correo Electronico invalido";
+                    Lbl_Message.ForeColor = Color.Red;
+                }
+                else
+                {
+                    Lbl_Message.Text = "Correo Electronico valido";
+                    Lbl_Message.ForeColor = Color.Green;
+                }
+                MessageBox.Show("Datos Guardados, Regreses a la pagina anterior.");
+            }
+
+
+
+
+            }
+        private void Regresar()
         {
             Pantalla.Login back = new Pantalla.Login();
             back.Show();
             Dispose();
         }
 
-        private void Btn_Guardar_Click(object sender, EventArgs e)
+        private void ValidarNombres()
         {
-            if (!(Txt_Ced.Text.Equals("") || txt_Name.Text.Equals("")|| Txt_Apellidos.Text.Equals("") || Txt_User.Text.Equals("") || Txt_Paassw.Text.Equals("")))
+            if (Regex.IsMatch(Nombre.Text, @"^[a-zA-Z]+$"))
             {
-           
-                MessageBox.Show("Datos Guardados, Regreses a la pagina anterior.");
+                Lbl_Message.Text = "Nombre Correcto";
             }
             else
             {
-                MessageBox.Show("No dejes campos vacios.");
+                Lbl_Message.Text = "Nombre Incorrecto";
             }
         }
-        private void ShowPassw_CheckedChanged(object sender, EventArgs e)
+        private void ValidarApellido()
         {
-            if (ShowPassw.Checked)
+            if (Regex.IsMatch(Apellidos.Text, @"^[a-zA-Z]+$"))
             {
-                Txt_Paassw.UseSystemPasswordChar = false;
-
+                Lbl_Message.Text = "Apellido Correctos";
             }
             else
             {
-                Txt_Paassw.UseSystemPasswordChar = true;
+                Lbl_Message.Text = "Apellido Incorrecto";
             }
         }
-        #endregion
+        private void ValidarUser()
+        {
+            if (Regex.IsMatch(User.Text, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$"))
+            {
+                Lbl_Message.Text = "Usuario Correcto";
+            }
+            else
+            {
+                Lbl_Message.Text = "Usuario Incorrecto";
+            }
+        }
+        private void ValidarPassword()
+        {
+            if (Regex.IsMatch(Passw.Text, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"))
+            {
+                Lbl_Message.Text = "Contraseña Correcta";
+            }
+            else
+            {
+                Lbl_Message.Text = "Contraseña Incorrecta";
+            }
+        }
+        private static bool ValidarEmail(string correo)
+        {
+            string emailFormato;
+            emailFormato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(correo, emailFormato))
+            {
+                if (Regex.Replace(correo, emailFormato, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
 
+}
 
+        #endregion termina los metodos genericos
+
+      
     }
 }

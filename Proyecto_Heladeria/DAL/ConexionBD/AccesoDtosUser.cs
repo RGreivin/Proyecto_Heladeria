@@ -13,7 +13,7 @@ namespace DAL.ConexionBD
     {
         #region Metodo login usuarios
         //Creamos un metodo de tipo bool para el login
-        public bool login(string user, string passw)
+        public bool Login(string user, string passw)
         {
             //variable implicita
             using (var connection = GetSqlConnection())
@@ -36,9 +36,9 @@ namespace DAL.ConexionBD
                         {
                             //agregamos los valores a la clase statica 
                             //Estos datos permaneceran en menoria
-                            cacheLogin.nombre = rd.GetString(0);
-                            cacheLogin.apellidos = rd.GetString(1);
-                            cacheLogin.rol = rd.GetString(2);
+                            CacheLogin.Nombre = rd.GetString(0);
+                            CacheLogin.Apellidos = rd.GetString(1);
+                            CacheLogin.Rol = rd.GetString(2);
                         }
                         return true;
                     }

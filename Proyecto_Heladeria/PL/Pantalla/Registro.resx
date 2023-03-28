@@ -120,15 +120,15 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Btn_Regresar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALEAAACxAcYtSY0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABdklEQVRIS+2TvUoDQRSF1x9ExB+wFKwtfAALm11n/Cti4eyVEBHFUl8iCIK9DyDqG4hFrCxsxE4E
-        QQsRQVJZCLozKjieda+YTTbGbIIg5IPT3Dlz7uzsHafF/8ESdWipVo2gGS41Dy3mvUD451r4VgsqcLlx
-        gqnsME69FwWzpH/Ey+mxLvUibBPSsfBIJ7iuLrbWh3WcNj1BSwi5Lwst1yt8F1qoHSOVtPl8O0dUJ/DU
-        GD7/NCHsN7oJpFrgqDjPk9khGHah95INqRQIOrCzi/0cHYGFWtdRp+jscZoGOR4NJOWwUKw0NiIqhP+T
-        W+Dnjs/1GelvYdFUmtPJCH+N479JnPv0Klp3pZuj44SjF41h4sbr8FpDz6dPqGVM0Dbqt2U+PErKcWQl
-        1nU7jVDrMD7ENyW/5PAthKOKhncl/n1erk44EXzCt58afGElDcB3HDVQV1yuzYunRrHpENrgUlVsJtOD
-        8Et4n7jUfIxHI4mT1OKPcZwPrtj1VetWnw4AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAF2SURBVEhL7ZO9
+        SgNBFIXXH0TEH7AUrC18AAubXWf8K2Lh7JUQEcVSXyIIgr0PIOobiEWsLGzETgRBCxFBUlkIujMqOJ51
+        r5hNNsZsgiDkg9PcOXPu7Owdp8X/wRJ1aKlWjaAZLjUPLea9QPjnWvhWCypwuXGCqewwTr0XBbOkf8TL
+        6bEu9SJsE9Kx8EgnuK4uttaHdZw2PUFLCLkvCy3XK3wXWqgdI5W0+Xw7R1Qn8NQYPv80Iew3ugmkWuCo
+        OM+T2SEYdqH3kg2pFAg6sLOL/RwdgYVa11Gn6OxxmgY5Hg0k5bBQrDQ2IiqE/5Nb4OeOz/UZ6W9h0VSa
+        08kIf43jv0mc+/QqWnelm6PjhKMXjWHixuvwWkPPp0+oZUzQNuq3ZT48SspxZCXWdTuNUOswPsQ3Jb/k
+        8C2Eo4qGdyX+fV6uTjgRfMK3nxp8YSUNwHccNVBXXK7Ni6dGsekQ2uBSVWwm04PwS3ifuNR8jEcjiZPU
+        4o9xnA+u2PVV61afDgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="Btn_Guardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -146,4 +146,10 @@
         Q2SeKIqiPAOIA3I9GcNi9wAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="Tt_Message.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 17</value>
+  </metadata>
 </root>

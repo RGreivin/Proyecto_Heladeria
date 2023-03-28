@@ -10,10 +10,10 @@ namespace BLL.Login
     public class Login_BLL
     {
         //instanciamos al objeto de acceso dtos de usuario
-         AccesoDtosUser dtos_Users = new AccesoDtosUser();
+         AccesoDtosUser Dtos_Users = new AccesoDtosUser();
         public bool Dtos_Login(string user, string pass)
         {
-            return dtos_Users.login(user, pass);
+            return Dtos_Users.Login(user, pass);
 
         }
         //Cambiar el logueo

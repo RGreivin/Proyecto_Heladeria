@@ -36,18 +36,26 @@ namespace PL.Pantalla
             this.panel2 = new System.Windows.Forms.Panel();
             this.Btn_Salir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.Txt_User = new System.Windows.Forms.TextBox();
+            this.User = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Txt_passw = new System.Windows.Forms.TextBox();
+            this.Passw = new System.Windows.Forms.TextBox();
             this.ShowPassw = new System.Windows.Forms.CheckBox();
             this.Btn_Ingresar = new System.Windows.Forms.Button();
             this.link_RecuperarAcceso = new System.Windows.Forms.LinkLabel();
             this.btn_Registrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.pUser = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pPassw = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.PContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pUser.SuspendLayout();
+            this.pPassw.SuspendLayout();
+            this.PContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,8 +92,9 @@ namespace PL.Pantalla
             // 
             // Btn_Salir
             // 
+            this.Btn_Salir.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.Btn_Salir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Btn_Salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Salir.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Salir.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Salir.Image")));
@@ -104,20 +113,23 @@ namespace PL.Pantalla
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(144, 220);
+            this.label2.Location = new System.Drawing.Point(72, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Usuario:";
             // 
-            // Txt_User
+            // User
             // 
-            this.Txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_User.Location = new System.Drawing.Point(96, 263);
-            this.Txt_User.Name = "Txt_User";
-            this.Txt_User.Size = new System.Drawing.Size(232, 22);
-            this.Txt_User.TabIndex = 3;
+            this.User.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.User.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.User.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.User.Location = new System.Drawing.Point(20, 57);
+            this.User.Name = "User";
+            this.User.Size = new System.Drawing.Size(232, 22);
+            this.User.TabIndex = 3;
+            this.User.Enter += new System.EventHandler(this.Txt_Enter);
+            this.User.Leave += new System.EventHandler(this.Txt_Leave);
             // 
             // label3
             // 
@@ -125,21 +137,24 @@ namespace PL.Pantalla
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(131, 308);
+            this.label3.Location = new System.Drawing.Point(58, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña:";
             // 
-            // Txt_passw
+            // Passw
             // 
-            this.Txt_passw.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_passw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_passw.Location = new System.Drawing.Point(96, 354);
-            this.Txt_passw.Name = "Txt_passw";
-            this.Txt_passw.Size = new System.Drawing.Size(232, 22);
-            this.Txt_passw.TabIndex = 5;
-            this.Txt_passw.UseSystemPasswordChar = true;
+            this.Passw.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Passw.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Passw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Passw.Location = new System.Drawing.Point(21, 142);
+            this.Passw.Name = "Passw";
+            this.Passw.Size = new System.Drawing.Size(232, 22);
+            this.Passw.TabIndex = 5;
+            this.Passw.UseSystemPasswordChar = true;
+            this.Passw.Enter += new System.EventHandler(this.Txt_Enter);
+            this.Passw.Leave += new System.EventHandler(this.Txt_Leave);
             // 
             // ShowPassw
             // 
@@ -147,7 +162,7 @@ namespace PL.Pantalla
             this.ShowPassw.BackColor = System.Drawing.Color.Transparent;
             this.ShowPassw.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowPassw.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.ShowPassw.Location = new System.Drawing.Point(134, 393);
+            this.ShowPassw.Location = new System.Drawing.Point(134, 411);
             this.ShowPassw.Name = "ShowPassw";
             this.ShowPassw.Size = new System.Drawing.Size(160, 22);
             this.ShowPassw.TabIndex = 6;
@@ -160,12 +175,11 @@ namespace PL.Pantalla
             this.Btn_Ingresar.BackColor = System.Drawing.Color.SteelBlue;
             this.Btn_Ingresar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.Btn_Ingresar.FlatAppearance.BorderSize = 0;
-            this.Btn_Ingresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.Btn_Ingresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.Btn_Ingresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.Btn_Ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Ingresar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Ingresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Ingresar.Image")));
             this.Btn_Ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Ingresar.Location = new System.Drawing.Point(240, 446);
             this.Btn_Ingresar.Name = "Btn_Ingresar";
@@ -173,7 +187,6 @@ namespace PL.Pantalla
             this.Btn_Ingresar.Size = new System.Drawing.Size(155, 38);
             this.Btn_Ingresar.TabIndex = 9;
             this.Btn_Ingresar.Text = "Ingresar";
-            this.Btn_Ingresar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Ingresar.UseVisualStyleBackColor = false;
             this.Btn_Ingresar.Click += new System.EventHandler(this.Btn_Ingresar_Click);
             // 
@@ -191,14 +204,14 @@ namespace PL.Pantalla
             this.link_RecuperarAcceso.TabIndex = 14;
             this.link_RecuperarAcceso.TabStop = true;
             this.link_RecuperarAcceso.Text = "Recuperar usuario / contraseña";
-            this.link_RecuperarAcceso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_RecuperarAcceso_LinkClicked);
+            this.link_RecuperarAcceso.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_RecuperarAcceso_LinkClicked);
             // 
             // btn_Registrar
             // 
             this.btn_Registrar.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_Registrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Registrar.FlatAppearance.BorderSize = 0;
-            this.btn_Registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btn_Registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btn_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,7 +224,7 @@ namespace PL.Pantalla
             this.btn_Registrar.TabIndex = 13;
             this.btn_Registrar.Text = "Registrarse";
             this.btn_Registrar.UseVisualStyleBackColor = false;
-            this.btn_Registrar.Click += new System.EventHandler(this.btn_Registrar_Click);
+            this.btn_Registrar.Click += new System.EventHandler(this.Btn_Registrar_Click);
             // 
             // pictureBox1
             // 
@@ -230,21 +243,65 @@ namespace PL.Pantalla
             this.bunifuDragControl1.TargetControl = this.panel1;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // pUser
+            // 
+            this.pUser.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pUser.Controls.Add(this.panel5);
+            this.pUser.Location = new System.Drawing.Point(20, 79);
+            this.pUser.Name = "pUser";
+            this.pUser.Size = new System.Drawing.Size(232, 4);
+            this.pUser.TabIndex = 18;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel5.Location = new System.Drawing.Point(0, 94);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(232, 3);
+            this.panel5.TabIndex = 17;
+            // 
+            // pPassw
+            // 
+            this.pPassw.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pPassw.Controls.Add(this.panel7);
+            this.pPassw.Location = new System.Drawing.Point(21, 163);
+            this.pPassw.Name = "pPassw";
+            this.pPassw.Size = new System.Drawing.Size(232, 4);
+            this.pPassw.TabIndex = 18;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel7.Location = new System.Drawing.Point(0, 94);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(232, 3);
+            this.panel7.TabIndex = 17;
+            // 
+            // PContainer
+            // 
+            this.PContainer.Controls.Add(this.pUser);
+            this.PContainer.Controls.Add(this.pPassw);
+            this.PContainer.Controls.Add(this.label2);
+            this.PContainer.Controls.Add(this.User);
+            this.PContainer.Controls.Add(this.label3);
+            this.PContainer.Controls.Add(this.Passw);
+            this.PContainer.Location = new System.Drawing.Point(82, 223);
+            this.PContainer.Name = "PContainer";
+            this.PContainer.Size = new System.Drawing.Size(269, 177);
+            this.PContainer.TabIndex = 19;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(421, 585);
+            this.Controls.Add(this.PContainer);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.link_RecuperarAcceso);
             this.Controls.Add(this.btn_Registrar);
             this.Controls.Add(this.Btn_Ingresar);
             this.Controls.Add(this.ShowPassw);
-            this.Controls.Add(this.Txt_passw);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Txt_User);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -255,6 +312,10 @@ namespace PL.Pantalla
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pUser.ResumeLayout(false);
+            this.pPassw.ResumeLayout(false);
+            this.PContainer.ResumeLayout(false);
+            this.PContainer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,9 +327,9 @@ namespace PL.Pantalla
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Txt_User;
+        private System.Windows.Forms.TextBox User;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Txt_passw;
+        private System.Windows.Forms.TextBox Passw;
         private System.Windows.Forms.CheckBox ShowPassw;
         private System.Windows.Forms.Button Btn_Ingresar;
         private System.Windows.Forms.LinkLabel link_RecuperarAcceso;
@@ -276,5 +337,10 @@ namespace PL.Pantalla
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Btn_Salir;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Panel pUser;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pPassw;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel PContainer;
     }
 }

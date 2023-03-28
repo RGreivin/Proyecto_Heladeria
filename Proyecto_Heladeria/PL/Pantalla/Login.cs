@@ -17,29 +17,89 @@ namespace PL.Pantalla
         {
             InitializeComponent();
         }
-        #region Config botones login
+        #region Metodos del sistema
         private void ShowPassw_CheckedChanged(object sender, EventArgs e)
         {
-            if (ShowPassw.Checked)
-            {
-                Txt_passw.UseSystemPasswordChar = false;
-
-            }
-            else
-            {
-                Txt_passw.UseSystemPasswordChar = true;
-            }
+            ShowPasword();
         }
 
-        private void btn_Registrar_Click(object sender, EventArgs e)
+        private void Btn_Registrar_Click(object sender, EventArgs e)
         {
-            Pantalla.Registro Form_registro = new Pantalla.Registro();
-            Form_registro.Show();
-            Dispose();
+            Registrar();
         }
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
-            if (Txt_User.Text == "" || Txt_passw.Text == "")
+            ValidarLog();
+          
+        }
+        private void Link_RecuperarAcceso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RecuperarAcceso();
+        }
+        private void Btn_Salir_Click(object sender, EventArgs e)
+        {
+            ExitApp();
+        }
+
+        #endregion Termina metodos del sistema
+
+        #region metodos handler del evento enter
+        //Este se da cuando el control esta activo
+        private void Txt_Enter(object sender, EventArgs e)
+        {
+            //Hace referencia al objeto que dispara el evento
+            //En este caso el textbox que esta activo
+            TextBox txt = sender as TextBox;
+            //Recorremos todos los controles que se encuentran dentro del panel
+            foreach (Control ctrl in PContainer.Controls)
+            {
+                /*
+                 * Si es un Panel y el nombre del Panel es "p"
+                 * concatenamos el name del textbox 
+                 */
+                if(ctrl is Panel && ctrl.Name=="p"+ txt.Name)
+                {
+                    ctrl.BackColor = Color.Gold;
+                }
+            }
+        }
+        private void Txt_Leave(object sender, EventArgs e)
+        {
+            //Hace referencia al objeto que dispara el evento
+            //En este caso el textbox que esta activo
+            TextBox txt = sender as TextBox;
+
+            //Recorremos todos los controles que se encuentran dentro del panel
+            foreach (Control ctrl in PContainer.Controls)
+            {
+                /*
+                 * Si es un Panel y el nombre del Panel es "p"
+                 * concatenamos el name del textbox 
+                 */
+                if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
+                {
+                    if (txt.Text == string.Empty)
+                    {
+                        ctrl.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        ctrl.BackColor = Color.DarkGray;
+                    }  
+                }
+            }
+        }
+        #endregion Fin metodos handler del evento enter
+
+        #region Metodos genericos
+        private void Limpiartext()
+        {
+            Passw.Clear();
+            User.Clear();
+        }
+        private void ValidarLog()
+        {
+            if (User.Text == "" || Passw.Text == "")
             {
 
                 MessageBox.Show("No dejes campos vacios", "Informative messages ",
@@ -50,7 +110,7 @@ namespace PL.Pantalla
 
                 Login_BLL log = new Login_BLL();
                 //var implicita
-                var valid_Login = log.Dtos_Login(Txt_User.Text, Txt_passw.Text);
+                var valid_Login = log.Dtos_Login(User.Text, Passw.Text);
                 //Validamos que dtos  exitan 
                 if (valid_Login == true)
                 {
@@ -61,28 +121,39 @@ namespace PL.Pantalla
                 else
                 {
                     MessageBox.Show("Los datos no son correctos", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Limpiartext();
                 }
 
             }
         }
+        private void Registrar()
+        {
+            Pantalla.Registro Form_registro = new Pantalla.Registro();
+            Form_registro.Show();
+            Dispose();
+        }
+        private void ShowPasword()
+        {
+            if (ShowPassw.Checked)
+            {
+                Passw.UseSystemPasswordChar = false;
 
-
-            private void link_RecuperarAcceso_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+            }
+            else
+            {
+                Passw.UseSystemPasswordChar = true;
+            }
+        }
+        private void ExitApp()
+        {
+            Application.Exit();
+        }
+        private void RecuperarAcceso()
         {
             Pantalla.Recuperar_Dtos form_recup = new Pantalla.Recuperar_Dtos();
             form_recup.Show();
             Dispose();
         }
-        private void Btn_Salir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        #endregion
-
+        #endregion Fin Metodos genericos
     }
-    #region Metodos genericos
-
-
-    #endregion
 }

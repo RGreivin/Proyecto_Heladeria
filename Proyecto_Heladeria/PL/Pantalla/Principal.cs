@@ -22,21 +22,21 @@ namespace PL.Pantalla
         }
         private void Principal_Load(object sender, EventArgs e)
         {
-            loadUser();
+            LoadUser();
          
            
         }
 
         private void Button_Closed_Click(object sender, EventArgs e)
         {
-            closedApp();
+            ClosedApp();
         }
 
         private void Btn_MenuLateral_Click(object sender, EventArgs e)
         {
-            menuLateral();
+            MenuLateral();
         }
-        private void hora_Fecha_Tick(object sender, EventArgs e)
+        private void Hora_Fecha_Tick(object sender, EventArgs e)
         {
             Lbl_hora.Text=  DateTime.Now.ToString("hh:mm:ss: tt");
             Lbl_fech.Text = DateTime.Now.ToShortDateString();
@@ -47,11 +47,11 @@ namespace PL.Pantalla
         }
 #endregion
         #region Metodos genericos
-        private void closedApp()
+        private void ClosedApp()
         {
             Application.Exit();
         }
-        private void menuLateral()
+        private void MenuLateral()
         {
             if (Panel_Options.Width == 60)
             {
@@ -80,10 +80,10 @@ namespace PL.Pantalla
 
             }   
         }
-        private void loadUser()
+        private void LoadUser()
         {
-            Lbl_FullName.Text = cacheLogin.nombre +" "+ cacheLogin.apellidos;
-            Lbl_Rol.Text = cacheLogin.rol;
+            Lbl_FullName.Text = CacheLogin.Nombre +" "+ CacheLogin.Apellidos;
+            Lbl_Rol.Text = CacheLogin.Rol;
         }
 
 

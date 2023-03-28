@@ -17,7 +17,7 @@ namespace PL.Pantalla
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             progressBar1.Increment(4);
             Opacity -= 0.020;
