@@ -13,7 +13,7 @@ namespace PL.Pantalla
 {
     public partial class Recuperar_Dtos : Form
     {
-        Login_BLL v_ins = new Login_BLL();
+      
         public Recuperar_Dtos()
         {
             InitializeComponent();
@@ -37,6 +37,10 @@ namespace PL.Pantalla
         private void Btn_EnviarEmail_Click(object sender, EventArgs e)
         {
             EnviarCorreo();
+        }
+        private void Btn_EnviarTelefono_Click(object sender, EventArgs e)
+        {
+            RecuperarTelefono();
         }
         #endregion
 
@@ -110,9 +114,17 @@ namespace PL.Pantalla
             }
             
         }
+        private void RecuperarTelefono()
+        {
+            var user = new Login_BLL();
+            var result = user.RecuperarCuenta(Telefono.Text);
+            Lbl_Msj.Text = result;
+            Lbl_Msj.Visible = true;
+        }
+
 
         #endregion
 
-
+     
     }
 }

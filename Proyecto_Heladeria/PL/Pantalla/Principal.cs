@@ -18,6 +18,7 @@ namespace PL.Pantalla
         {
             InitializeComponent();
             this.Tt_Mensaje.SetToolTip(this.Btn_MenuLateral, "Presione para ocultar  menú lateral");
+            validarRol();
 
         }
         private void Principal_Load(object sender, EventArgs e)
@@ -31,7 +32,6 @@ namespace PL.Pantalla
         {
             ClosedApp();
         }
-
         private void Btn_MenuLateral_Click(object sender, EventArgs e)
         {
             MenuLateral();
@@ -45,11 +45,45 @@ namespace PL.Pantalla
         {
             this.WindowState = FormWindowState.Minimized;
         }
-#endregion
+        private void Btn_Inventario_Click(object sender, EventArgs e)
+        {
+            SubMenuInventarios();
+        }
+
+        private void Btn_Products_Click(object sender, EventArgs e)
+        {
+            InventarioProducts();
+        }
+
+        private void Btn_Promociones_Click(object sender, EventArgs e)
+        {
+            InventarioProducts();
+        }
+
+        private void Btn_Login_Click(object sender, EventArgs e)
+        {
+            RegresarLogin();
+        }
+        #endregion Finaliza los metodos del sistema
+
         #region Metodos genericos
         private void ClosedApp()
         {
             Application.Exit();
+        }
+        private void validarRol()
+        {
+            if (CacheLogin.Rol == "Empleado")
+            {
+                Btn_Empleados.Enabled=false;
+                Btn_Inventario.Enabled = false;
+            }
+            else
+            {
+                Btn_Empleados.Enabled = true;
+                Btn_Inventario.Enabled = true;
+                
+            }
         }
       
         private void MenuLateral()
@@ -60,10 +94,10 @@ namespace PL.Pantalla
                 Panel_Options.Width = 265;
                 Panel_Transition.ShowSync(Panel_Options);
                 Logo_Transition.ShowSync(Panel_Infor);
-                Btn_1.Visible = true;
-                Btn_2.Visible = true;
-                Btn_3.Visible = false;
-                Btn_4.Visible = false;
+                Btn1.Visible = true;
+                //Btn2.Visible = true;
+                //Btn3.Visible = false;
+                //Btn4.Visible = false;
                 this.Tt_Mensaje.SetToolTip(this.Btn_MenuLateral, "Presione para ocultar  menú lateral");
 
             }
@@ -73,25 +107,37 @@ namespace PL.Pantalla
                 Panel_Options.Visible = false;
                 Panel_Options.Width = 60;
                 Panel_Transition.ShowSync(Panel_Options);
-                Btn_1.Visible = false;
-                Btn_2.Visible = false;
-                Btn_3.Visible = false;
-                Btn_4.Visible = false;
+                Btn1.Visible = false;
+                //Btn2.Visible = false;
+                //Btn3.Visible = false;
+                //Btn4.Visible = false;
                 this.Tt_Mensaje.SetToolTip(this.Btn_MenuLateral, "Presione para mostrar el menú lateral");
 
             }   
         }
         private void LoadUser()
         {
-            Lbl_FullName.Text = CacheLogin.Nombre +" "+ CacheLogin.Apellidos;
-            Lbl_Rol.Text = CacheLogin.Rol;
+             Lbl_FullName.Text = CacheLogin.Nombre +" "+ CacheLogin.Apellidos;
+             Lbl_Rol.Text = CacheLogin.Rol;
+        }
+        private void SubMenuInventarios()
+        {
+            P_SubMenu.Visible = true;
+        }
+        private void InventarioProducts()
+        {
+            P_SubMenu.Visible = false;   
         }
 
-
-
+        private void RegresarLogin()
+        {
+            Pantalla.Login ins = new Login();
+            ins.Show();
+            Hide();
+        }
 
         #endregion
 
-       
+      
     }
 }

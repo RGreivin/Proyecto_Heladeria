@@ -80,17 +80,17 @@ namespace DAL.ConexionBD
         {
 
             comand.Connection = conexion.AbrirConexion();
-            comand.CommandText = "SELECT * FROM Empleados WHERE  Telefono=@Telefono";
+            comand.CommandText = "RecuperarLogin2";
             comand.Parameters.AddWithValue("@Telefono", usertelefono);
-            comand.CommandType = CommandType.Text;
+            comand.CommandType = CommandType.StoredProcedure;
             SqlDataReader rd = comand.ExecuteReader();
             if (rd.Read() == true)
             {
-                string userName = rd.GetString(2) + "," + rd.GetString(3);
-                string user = rd.GetString(7);
+                string userName = "Hola "+ rd.GetString(0) +" "+  rd.GetString(1)+"\n";
+                string user = rd.GetString(2);
                 //Obtenemos el correo del usuario y la contraseña
-                string userTelefono = rd.GetString(6);
-                string password = rd.GetString(8);
+                string userTelefono = rd.GetString(4);
+                string password = rd.GetString(3);
 
 
                 if (usertelefono.Length <= 0)
@@ -99,11 +99,11 @@ namespace DAL.ConexionBD
                 }
                 usertelefono = usertelefono.Replace(" ", "");
                 System.Diagnostics.Process.Start("http://api.whatsapp.com/send?phone=" + usertelefono + "&text=" + userName + " su usuario es:  " + user + "\n" + " su contraseña es: " + password);
-                return "EL Mensaje  se envio, correctamente";
+                return "El  mensaje se envio, correctamente";
             }
             else
             {
-                return "Lo sentimos, no tiene un numero de telefono \n a esta cuenta";
+                return "Lo sentimos, no tienes un numero de telefono \n a esta cuenta";
             }
         }
     }

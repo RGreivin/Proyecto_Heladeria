@@ -21,9 +21,9 @@ namespace BLL.Login
         {
             return Dtos_Users.RecuperarUserPass(userRequesting);
         }
-        //public string RecuperarCuenta(string usertelefono)
-        //{
-        //    //return log.recuperarAcceso(usertelefono);
-        //}
+        public string RecuperarCuenta(string usertelefono)
+        {
+            return Dtos_Users.recuperarAcceso(usertelefono);
+        }
     }
 }

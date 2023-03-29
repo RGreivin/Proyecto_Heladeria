@@ -35,6 +35,7 @@ namespace PL.Pantalla
             this.panel2 = new System.Windows.Forms.Panel();
             this.Btn_Regresar = new System.Windows.Forms.Button();
             this.pContainer = new System.Windows.Forms.Panel();
+            this.Lbl_Message = new System.Windows.Forms.Label();
             this.pTelefono = new System.Windows.Forms.Panel();
             this.Telefono = new System.Windows.Forms.TextBox();
             this.pEmail = new System.Windows.Forms.Panel();
@@ -43,7 +44,7 @@ namespace PL.Pantalla
             this.Email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Lbl_Message = new System.Windows.Forms.Label();
+            this.Lbl_Msj = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pContainer.SuspendLayout();
@@ -104,6 +105,7 @@ namespace PL.Pantalla
             // 
             // pContainer
             // 
+            this.pContainer.Controls.Add(this.Lbl_Msj);
             this.pContainer.Controls.Add(this.Lbl_Message);
             this.pContainer.Controls.Add(this.pTelefono);
             this.pContainer.Controls.Add(this.Telefono);
@@ -118,6 +120,19 @@ namespace PL.Pantalla
             this.pContainer.Name = "pContainer";
             this.pContainer.Size = new System.Drawing.Size(481, 266);
             this.pContainer.TabIndex = 4;
+            // 
+            // Lbl_Message
+            // 
+            this.Lbl_Message.AutoSize = true;
+            this.Lbl_Message.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_Message.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Message.ForeColor = System.Drawing.Color.White;
+            this.Lbl_Message.Location = new System.Drawing.Point(83, 93);
+            this.Lbl_Message.Name = "Lbl_Message";
+            this.Lbl_Message.Size = new System.Drawing.Size(51, 20);
+            this.Lbl_Message.TabIndex = 21;
+            this.Lbl_Message.Text = "label4";
+            this.Lbl_Message.Visible = false;
             // 
             // pTelefono
             // 
@@ -142,7 +157,7 @@ namespace PL.Pantalla
             // pEmail
             // 
             this.pEmail.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.pEmail.Location = new System.Drawing.Point(87, 73);
+            this.pEmail.Location = new System.Drawing.Point(87, 71);
             this.pEmail.Name = "pEmail";
             this.pEmail.Size = new System.Drawing.Size(263, 5);
             this.pEmail.TabIndex = 18;
@@ -164,6 +179,7 @@ namespace PL.Pantalla
             this.Btn_EnviarTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_EnviarTelefono.UseMnemonic = false;
             this.Btn_EnviarTelefono.UseVisualStyleBackColor = false;
+            this.Btn_EnviarTelefono.Click += new System.EventHandler(this.Btn_EnviarTelefono_Click);
             // 
             // Btn_EnviarEmail
             // 
@@ -215,18 +231,18 @@ namespace PL.Pantalla
             this.label2.TabIndex = 13;
             this.label2.Text = "Correo:";
             // 
-            // Lbl_Message
+            // Lbl_Msj
             // 
-            this.Lbl_Message.AutoSize = true;
-            this.Lbl_Message.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Message.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Message.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Message.Location = new System.Drawing.Point(83, 93);
-            this.Lbl_Message.Name = "Lbl_Message";
-            this.Lbl_Message.Size = new System.Drawing.Size(51, 20);
-            this.Lbl_Message.TabIndex = 21;
-            this.Lbl_Message.Text = "label4";
-            this.Lbl_Message.Visible = false;
+            this.Lbl_Msj.AutoSize = true;
+            this.Lbl_Msj.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_Msj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Msj.ForeColor = System.Drawing.Color.White;
+            this.Lbl_Msj.Location = new System.Drawing.Point(96, 213);
+            this.Lbl_Msj.Name = "Lbl_Msj";
+            this.Lbl_Msj.Size = new System.Drawing.Size(51, 20);
+            this.Lbl_Msj.TabIndex = 22;
+            this.Lbl_Msj.Text = "label4";
+            this.Lbl_Msj.Visible = false;
             // 
             // Recuperar_Dtos
             // 
@@ -266,5 +282,6 @@ namespace PL.Pantalla
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Lbl_Message;
+        private System.Windows.Forms.Label Lbl_Msj;
     }
 }
