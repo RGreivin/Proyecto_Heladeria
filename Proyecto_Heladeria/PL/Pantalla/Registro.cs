@@ -293,8 +293,9 @@ namespace PL.Pantalla
 
 
 
+
         #endregion Termina handler del evento enter
 
-        
+       
     }
     }

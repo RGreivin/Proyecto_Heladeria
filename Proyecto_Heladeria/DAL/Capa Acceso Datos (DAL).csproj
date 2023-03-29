@@ -45,6 +45,8 @@
     <Compile Include="ConexionBD\ConectarBD.cs" />
     <Compile Include="ConexionBD\RegistroDtosUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiciosMail\Mail.cs" />
+    <Compile Include="ServiciosMail\SistemaSoportMail.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa Soporte\Capa Soporte.csproj">

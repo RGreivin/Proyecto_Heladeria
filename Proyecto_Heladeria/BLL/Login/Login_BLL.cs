@@ -16,15 +16,14 @@ namespace BLL.Login
             return Dtos_Users.Login(user, pass);
 
         }
-        //Cambiar el logueo
-        //public bool editUser(string user, string pass)
+        //Creamos un metodo publico con retorno string y un parametro de entrada
+        public string RecuperarPassword(string userRequesting)
+        {
+            return Dtos_Users.RecuperarUserPass(userRequesting);
+        }
+        //public string RecuperarCuenta(string usertelefono)
         //{
-        //    if (user == cacheLogin.user)
-        //    {
-
-        //    }
-        //    return true;
-
+        //    //return log.recuperarAcceso(usertelefono);
         //}
     }
 }
