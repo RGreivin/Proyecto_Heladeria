@@ -264,7 +264,7 @@ namespace PL.Pantalla
             // 
             this.pPassw.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pPassw.Controls.Add(this.panel7);
-            this.pPassw.Location = new System.Drawing.Point(21, 165);
+            this.pPassw.Location = new System.Drawing.Point(21, 164);
             this.pPassw.Name = "pPassw";
             this.pPassw.Size = new System.Drawing.Size(232, 4);
             this.pPassw.TabIndex = 18;
