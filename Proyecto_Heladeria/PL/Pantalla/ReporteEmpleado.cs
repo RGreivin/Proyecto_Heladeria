@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace PL.Pantalla
 {
@@ -21,7 +22,10 @@ namespace PL.Pantalla
         {
             // TODO: This line of code loads data into the 'alturaPolar_v2.Usuarios' table. You can move, or remove it, as needed.
             this.usuariosTableAdapter.Fill(this.alturaPolar_v2.Usuarios);
-            this.reportViewer1.RefreshReport();
+            this.report_empleados.RefreshReport();
+         
         }
+  
+
     }
 }

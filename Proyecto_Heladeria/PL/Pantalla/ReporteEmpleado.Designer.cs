@@ -31,21 +31,36 @@ namespace PL.Pantalla
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.alturaPolarv2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alturaPolar_v2 = new PL.AlturaPolar_v2();
             this.alturaPolar_v2DataSet = new PL.AlturaPolar_v2DataSet();
             this.UsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.alturaPolar_v2 = new PL.AlturaPolar_v2();
-            this.alturaPolarv2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.report_empleados = new Microsoft.Reporting.WinForms.ReportViewer();
             this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new PL.AlturaPolar_v2TableAdapters.UsuariosTableAdapter();
-            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alturaPolarv2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alturaPolar_v2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alturaPolar_v2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alturaPolar_v2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alturaPolarv2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // usuariosBindingSource2
+            // 
+            this.usuariosBindingSource2.DataMember = "Usuarios";
+            this.usuariosBindingSource2.DataSource = this.alturaPolarv2BindingSource;
+            // 
+            // alturaPolarv2BindingSource
+            // 
+            this.alturaPolarv2BindingSource.DataSource = this.alturaPolar_v2;
+            this.alturaPolarv2BindingSource.Position = 0;
+            // 
+            // alturaPolar_v2
+            // 
+            this.alturaPolar_v2.DataSetName = "AlturaPolar_v2";
+            this.alturaPolar_v2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // alturaPolar_v2DataSet
             // 
@@ -57,28 +72,18 @@ namespace PL.Pantalla
             this.UsuariosBindingSource.DataMember = "Usuarios";
             this.UsuariosBindingSource.DataSource = this.alturaPolar_v2DataSet;
             // 
-            // reportViewer1
+            // report_empleados
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.report_empleados.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "Usuarios";
             reportDataSource1.Value = this.usuariosBindingSource2;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PL.Pantalla.ReportEmpleado.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(986, 573);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // alturaPolar_v2
-            // 
-            this.alturaPolar_v2.DataSetName = "AlturaPolar_v2";
-            this.alturaPolar_v2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // alturaPolarv2BindingSource
-            // 
-            this.alturaPolarv2BindingSource.DataSource = this.alturaPolar_v2;
-            this.alturaPolarv2BindingSource.Position = 0;
+            this.report_empleados.LocalReport.DataSources.Add(reportDataSource1);
+            this.report_empleados.LocalReport.ReportEmbeddedResource = "PL.Pantalla.ReportEmpleado.rdlc";
+            this.report_empleados.Location = new System.Drawing.Point(0, 0);
+            this.report_empleados.Name = "report_empleados";
+            this.report_empleados.ServerReport.BearerToken = null;
+            this.report_empleados.Size = new System.Drawing.Size(986, 573);
+            this.report_empleados.TabIndex = 0;
             // 
             // usuariosBindingSource1
             // 
@@ -89,37 +94,33 @@ namespace PL.Pantalla
             // 
             this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
-            // usuariosBindingSource2
-            // 
-            this.usuariosBindingSource2.DataMember = "Usuarios";
-            this.usuariosBindingSource2.DataSource = this.alturaPolarv2BindingSource;
-            // 
             // ReporteEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(986, 573);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.report_empleados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ReporteEmpleado";
             this.Text = "ReporteEmpleado";
             this.Load += new System.EventHandler(this.ReporteEmpleado_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alturaPolarv2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alturaPolar_v2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alturaPolar_v2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alturaPolar_v2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alturaPolarv2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
+
 
         #endregion
 
         private AlturaPolar_v2DataSet alturaPolar_v2DataSet;
         private System.Windows.Forms.BindingSource UsuariosBindingSource;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer report_empleados;
         private System.Windows.Forms.BindingSource alturaPolarv2BindingSource;
         private AlturaPolar_v2 alturaPolar_v2;
         private System.Windows.Forms.BindingSource usuariosBindingSource1;
