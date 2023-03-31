@@ -238,7 +238,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Cedula</rd:DefaultName>
@@ -268,7 +270,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Nombre</rd:DefaultName>
@@ -298,7 +302,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Apellidos</rd:DefaultName>
@@ -328,7 +334,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Correo</rd:DefaultName>
@@ -358,7 +366,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Telefono</rd:DefaultName>
@@ -388,7 +398,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Rol</rd:DefaultName>
@@ -430,8 +442,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Usuarios</DataSetName>
-        <Top>0.14111cm</Top>
-        <Left>1.30029cm</Left>
+        <Top>0.19403cm</Top>
+        <Left>0.39903cm</Left>
         <Height>5.08cm</Height>
         <Width>21.05195cm</Width>
         <Style>
@@ -449,7 +461,7 @@
       <BackgroundColor>White</BackgroundColor>
     </Style>
   </Body>
-  <Width>8.84176in</Width>
+  <Width>8.52926in</Width>
   <Page>
     <PageHeader>
       <Height>3.01377cm</Height>
@@ -460,7 +472,9 @@
           <Source>Embedded</Source>
           <Value>MicrosoftTeamsimage10</Value>
           <Sizing>Fit</Sizing>
-          <Height>2.66099cm</Height>
+          <Top>0.26458cm</Top>
+          <Left>0.82514cm</Left>
+          <Height>2.5728cm</Height>
           <Width>3.1929cm</Width>
           <Style>
             <Border>
@@ -472,9 +486,9 @@
           <Source>Embedded</Source>
           <Value>MicrosoftTeamsimage10</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.10583cm</Top>
-          <Left>19.15934cm</Left>
-          <Height>2.66099cm</Height>
+          <Top>0.37042cm</Top>
+          <Left>17.59813cm</Left>
+          <Height>2.46696cm</Height>
           <Width>3.1929cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -504,7 +518,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
           <Top>0.86113cm</Top>
-          <Left>7.40516cm</Left>
+          <Left>5.92181cm</Left>
           <Height>0.99688cm</Height>
           <Width>9.32625cm</Width>
           <ZIndex>2</ZIndex>
@@ -550,7 +564,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
           <Top>0.7225cm</Top>
-          <Left>6.87599cm</Left>
+          <Left>4.81056cm</Left>
           <Height>1.10271cm</Height>
           <Width>10.4375cm</Width>
           <Style>
