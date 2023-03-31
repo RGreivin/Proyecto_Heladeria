@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.61901cm</Width>
+              <Width>2.95906cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.38712cm</Width>
+              <Width>2.61983cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.08984cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.75305cm</Width>
+              <Width>4.46201cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.35007cm</Width>
+              <Width>2.16486cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.85285cm</Width>
+              <Width>3.11201cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -445,7 +445,7 @@
         <Top>0.19403cm</Top>
         <Left>0.39903cm</Left>
         <Height>5.08cm</Height>
-        <Width>21.05195cm</Width>
+        <Width>18.40762cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -461,7 +461,7 @@
       <BackgroundColor>White</BackgroundColor>
     </Style>
   </Body>
-  <Width>8.52926in</Width>
+  <Width>7.44593in</Width>
   <Page>
     <PageHeader>
       <Height>3.01377cm</Height>
@@ -472,8 +472,8 @@
           <Source>Embedded</Source>
           <Value>MicrosoftTeamsimage10</Value>
           <Sizing>Fit</Sizing>
-          <Top>0.26458cm</Top>
-          <Left>0.82514cm</Left>
+          <Top>0.33514cm</Top>
+          <Left>0.39903cm</Left>
           <Height>2.5728cm</Height>
           <Width>3.1929cm</Width>
           <Style>
@@ -486,8 +486,8 @@
           <Source>Embedded</Source>
           <Value>MicrosoftTeamsimage10</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.37042cm</Top>
-          <Left>17.59813cm</Left>
+          <Top>0.40569cm</Top>
+          <Left>13.27401cm</Left>
           <Height>2.46696cm</Height>
           <Width>3.1929cm</Width>
           <ZIndex>1</ZIndex>
@@ -517,11 +517,45 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>0.86113cm</Top>
-          <Left>5.92181cm</Left>
+          <Top>0.33514cm</Top>
+          <Left>3.91248cm</Left>
           <Height>0.99688cm</Height>
           <Width>9.32625cm</Width>
           <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox15">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Reporte de los Empleados </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>1.70821cm</Top>
+          <Left>5.18266cm</Left>
+          <Height>0.6cm</Height>
+          <Width>6.04542cm</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -564,7 +598,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
           <Top>0.7225cm</Top>
-          <Left>4.81056cm</Left>
+          <Left>3.85806cm</Left>
           <Height>1.10271cm</Height>
           <Width>10.4375cm</Width>
           <Style>
