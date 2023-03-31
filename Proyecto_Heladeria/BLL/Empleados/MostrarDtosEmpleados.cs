@@ -19,5 +19,9 @@ namespace BLL.Empleados
             return tblaUsuarios;
 
         }
+        public void EditEmpleados(string nombre, string apellido, string correo, string telefono, string rol, string ced)
+        {
+            dtos.ModificarDtos(nombre, apellido, correo, Convert.ToInt32(telefono),rol ,Convert.ToInt32(ced));
+        }
     }
 }

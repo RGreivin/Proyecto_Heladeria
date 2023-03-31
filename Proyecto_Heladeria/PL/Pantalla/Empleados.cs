@@ -30,6 +30,13 @@ namespace PL.Pantalla
                 Lbl_Message0.Visible=true;
                 Lbl_Message0.ForeColor = Color.Yellow;
             }
+            else
+            {
+                Lbl_Message0.Text = "Cédula es valida!";
+                Lbl_Message0.Visible = true;
+                Lbl_Message0.ForeColor = Color.Green;
+            }
+
         }
         private void Nombre_TextChanged(object sender, EventArgs e)
         {
@@ -58,12 +65,22 @@ namespace PL.Pantalla
                 Lbl_Message4.ForeColor = Color.Yellow;
             }
         }
+        private void Btn_Guardar_Click(object sender, EventArgs e)
+        {
+            GuardarDtos();
+        
+         }
+        private void Btn_Editar_Click(object sender, EventArgs e)
+        {
+            EditEmpleados();
+        }
         private void Btn_Limpiar_Click(object sender, EventArgs e)
         {
             LimpiarTxt();
         }
-        
-        #endregion
+
+        #endregion Termina los eventos del sistema
+
         #region Metodos Genericos
 
         private void Tbl_Empleados()
@@ -78,6 +95,11 @@ namespace PL.Pantalla
             Apellidos.Clear();
             Correo.Clear();
             Telefono.Clear();
+            Lbl_Message0.Visible=false;
+            Lbl_Message.Visible = false;   
+            Lbl_Message2.Visible = false;
+            Lbl_Message3.Visible = false;
+            Lbl_Message4.Visible = false;
             
         }
         private void ValidarNombre()
@@ -141,12 +163,61 @@ namespace PL.Pantalla
             
 
         }
+        private void GuardarDtos()
+        {
+            if (Cedula.Text == "" || Nombre.Text == "" || Apellidos.Text=="" || Correo.Text=="" || Telefono.Text==""|| Cbo_Rol.Text=="" )
+            {
+                MessageBox.Show("No dejes Campos vacios, por favor");
+            }
+            else
+            {
 
+                if (Lbl_Message.ForeColor == Color.Red || Lbl_Message2.ForeColor==Color.Red || Lbl_Message3.ForeColor==Color.Red)
+                {
+                    MessageBox.Show("No se puede guardar los datos");
+                }
+                else
+                {
+                    try
+                    {
+                        MostrarDtosEmpleados ins = new MostrarDtosEmpleados();
+                        ins.EditEmpleados(Nombre.Text,Apellidos.Text,Correo.Text,Telefono.Text,Cbo_Rol.Text,Cedula.Text);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("No se pudo editar los datos"+ex);
+                    }
 
-
+                    MessageBox.Show("Datos Guardados, Exitosamente");
+                    Tbl_Empleados();
+                    LimpiarTxt();
+                }
+            }
+        }
+        private void EditEmpleados()
+        {
+            if (DGV_Empleado.SelectedRows.Count > 0)
+            {
+                Nombre.Text = DGV_Empleado.CurrentRow.Cells["Nombre"].Value.ToString();
+                Apellidos.Text = DGV_Empleado.CurrentRow.Cells["Apellidos"].Value.ToString();
+                Correo.Text = DGV_Empleado.CurrentRow.Cells["Correo"].Value.ToString();
+                Telefono.Text = DGV_Empleado.CurrentRow.Cells["Telefono"].Value.ToString();
+                Cbo_Rol.Text = DGV_Empleado.CurrentRow.Cells["Rol"].Value.ToString();
+                Cedula.Text = DGV_Empleado.CurrentRow.Cells["Cedula"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione la fila que desea modificar");
+            }
+        }
 
         #endregion
 
+        private void Empleados_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'alturaPolar_v2DataSet.Usuarios' table. You can move, or remove it, as needed.
+            this.usuariosTableAdapter.Fill(this.alturaPolar_v2DataSet.Usuarios);
 
+        }
     }
 }

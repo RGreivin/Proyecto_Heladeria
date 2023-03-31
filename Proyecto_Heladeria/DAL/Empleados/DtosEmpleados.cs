@@ -28,6 +28,20 @@ namespace DAL.Empleados
             return tbl;
 
         }
+       public void ModificarDtos(string nombre, string apellido, string correo, int telefono,string rol, int ced)
+        {
+            comand.Connection = conexion.AbrirConexion();
+            comand.CommandText = "EditEmpleados";
+            comand.CommandType = CommandType.StoredProcedure;
+            comand.Parameters.AddWithValue("@Nombre", nombre);
+            comand.Parameters.AddWithValue("@Apellidos", apellido);
+            comand.Parameters.AddWithValue("@Correo", correo);
+            comand.Parameters.AddWithValue("@Telefono", telefono);
+            comand.Parameters.AddWithValue("@Rol", rol);
+            comand.Parameters.AddWithValue("@Cedula", ced);
+            comand.ExecuteNonQuery();
+
+        }
 
     }
 }
