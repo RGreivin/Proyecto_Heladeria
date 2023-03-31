@@ -22,3 +22,4 @@ C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\bi
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\Capa Soporte.dll
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\bin\Debug\Capa Soporte.pdb
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.Pantalla.Empleados.resources
+C:\Users\andre\source\repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\Debug\PL.Pantalla.InicioPrincipal.resources

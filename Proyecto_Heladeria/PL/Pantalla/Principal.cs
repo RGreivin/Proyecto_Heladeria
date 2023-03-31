@@ -19,13 +19,11 @@ namespace PL.Pantalla
             InitializeComponent();
             this.Tt_Mensaje.SetToolTip(this.Btn_MenuLateral, "Presione para ocultar  menú lateral");
             validarRol();
-       
+            AbrirForm(new InicioPrincipal());
         }
         private void Principal_Load(object sender, EventArgs e)
         {
             LoadUser();
-
-
         }
 
         private void Button_Closed_Click(object sender, EventArgs e)
@@ -49,17 +47,14 @@ namespace PL.Pantalla
         {
             SubMenuInventarios();
         }
-
         private void Btn_Products_Click(object sender, EventArgs e)
         {
             InventarioProducts();
         }
-
         private void Btn_Promociones_Click(object sender, EventArgs e)
         {
             InventarioProducts();
         }
-
         private void Btn_Login_Click(object sender, EventArgs e)
         {
             RegresarLogin();
@@ -67,6 +62,10 @@ namespace PL.Pantalla
         private void Btn_Empleados_Click(object sender, EventArgs e)
         {
             AbrirForm(new Empleados());
+        }
+        private void Btn_Inicio_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new InicioPrincipal());
         }
         #endregion Finaliza los metodos del sistema
 
@@ -157,8 +156,9 @@ namespace PL.Pantalla
         }
 
 
+
         #endregion
 
-       
+        
     }
 }

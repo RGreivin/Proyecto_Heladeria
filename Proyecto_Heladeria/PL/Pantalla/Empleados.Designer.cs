@@ -30,8 +30,8 @@ namespace PL.Pantalla
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.DGV_Empleado = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,13 +55,13 @@ namespace PL.Pantalla
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.alturaPolar_v2DataSet = new PL.AlturaPolar_v2DataSet();
+            
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new PL.AlturaPolar_v2DataSetTableAdapters.UsuariosTableAdapter();
+            
             this.Cbo_Rol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Empleado)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alturaPolar_v2DataSet)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,23 +71,23 @@ namespace PL.Pantalla
             this.DGV_Empleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Empleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.DGV_Empleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Empleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Empleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DGV_Empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Empleado.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Empleado.DefaultCellStyle = dataGridViewCellStyle6;
             this.DGV_Empleado.Dock = System.Windows.Forms.DockStyle.Top;
             this.DGV_Empleado.GridColor = System.Drawing.SystemColors.Control;
             this.DGV_Empleado.Location = new System.Drawing.Point(0, 0);
@@ -385,30 +385,28 @@ namespace PL.Pantalla
             // 
             // alturaPolar_v2DataSet
             // 
-            this.alturaPolar_v2DataSet.DataSetName = "AlturaPolar_v2DataSet";
-            this.alturaPolar_v2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+   
             // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.alturaPolar_v2DataSet;
+        
             // 
             // usuariosTableAdapter
             // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
+          
             // Cbo_Rol
             // 
             this.Cbo_Rol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbo_Rol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cbo_Rol.Font = new System.Drawing.Font("Palatino Linotype", 14.25F);
+            this.Cbo_Rol.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbo_Rol.FormattingEnabled = true;
             this.Cbo_Rol.Items.AddRange(new object[] {
             "Empleado",
             "Administrador"});
-            this.Cbo_Rol.Location = new System.Drawing.Point(636, 261);
+            this.Cbo_Rol.Location = new System.Drawing.Point(636, 257);
             this.Cbo_Rol.Name = "Cbo_Rol";
-            this.Cbo_Rol.Size = new System.Drawing.Size(194, 34);
+            this.Cbo_Rol.Size = new System.Drawing.Size(194, 30);
             this.Cbo_Rol.TabIndex = 22;
             // 
             // Empleados
@@ -420,11 +418,11 @@ namespace PL.Pantalla
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Empleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Empleados_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Empleado)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alturaPolar_v2DataSet)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -453,9 +451,9 @@ namespace PL.Pantalla
         private System.Windows.Forms.Label Lbl_Message4;
         private System.Windows.Forms.Label Lbl_Message3;
         private System.Windows.Forms.Label Lbl_Message0;
-        private AlturaPolar_v2DataSet alturaPolar_v2DataSet;
+        
         private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private AlturaPolar_v2DataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        
         private System.Windows.Forms.ComboBox Cbo_Rol;
     }
 }

@@ -213,11 +213,6 @@ namespace PL.Pantalla
 
         #endregion
 
-        private void Empleados_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'alturaPolar_v2DataSet.Usuarios' table. You can move, or remove it, as needed.
-            this.usuariosTableAdapter.Fill(this.alturaPolar_v2DataSet.Usuarios);
-
-        }
+   
     }
 }
