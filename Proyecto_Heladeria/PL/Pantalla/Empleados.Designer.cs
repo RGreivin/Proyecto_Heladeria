@@ -30,11 +30,12 @@ namespace PL.Pantalla
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.DGV_Empleado = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Cbo_Rol = new System.Windows.Forms.ComboBox();
             this.Lbl_Message0 = new System.Windows.Forms.Label();
             this.Lbl_Message4 = new System.Windows.Forms.Label();
             this.Lbl_Message3 = new System.Windows.Forms.Label();
@@ -55,13 +56,10 @@ namespace PL.Pantalla
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
-            this.Cbo_Rol = new System.Windows.Forms.ComboBox();
+            this.Btn_Reporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Empleado)).BeginInit();
             this.groupBox1.SuspendLayout();
-            
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,23 +69,23 @@ namespace PL.Pantalla
             this.DGV_Empleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Empleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.DGV_Empleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Empleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Empleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_Empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Empleado.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Empleado.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_Empleado.Dock = System.Windows.Forms.DockStyle.Top;
             this.DGV_Empleado.GridColor = System.Drawing.SystemColors.Control;
             this.DGV_Empleado.Location = new System.Drawing.Point(0, 0);
@@ -98,6 +96,7 @@ namespace PL.Pantalla
             // groupBox1
             // 
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.Btn_Reporte);
             this.groupBox1.Controls.Add(this.Cbo_Rol);
             this.groupBox1.Controls.Add(this.Lbl_Message0);
             this.groupBox1.Controls.Add(this.Lbl_Message4);
@@ -129,6 +128,20 @@ namespace PL.Pantalla
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Empleado";
+            // 
+            // Cbo_Rol
+            // 
+            this.Cbo_Rol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbo_Rol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cbo_Rol.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbo_Rol.FormattingEnabled = true;
+            this.Cbo_Rol.Items.AddRange(new object[] {
+            "Empleado",
+            "Administrador"});
+            this.Cbo_Rol.Location = new System.Drawing.Point(636, 257);
+            this.Cbo_Rol.Name = "Cbo_Rol";
+            this.Cbo_Rol.Size = new System.Drawing.Size(217, 30);
+            this.Cbo_Rol.TabIndex = 22;
             // 
             // Lbl_Message0
             // 
@@ -197,7 +210,7 @@ namespace PL.Pantalla
             this.Btn_Limpiar.ForeColor = System.Drawing.Color.White;
             this.Btn_Limpiar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Limpiar.Image")));
             this.Btn_Limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Limpiar.Location = new System.Drawing.Point(906, 335);
+            this.Btn_Limpiar.Location = new System.Drawing.Point(900, 290);
             this.Btn_Limpiar.Name = "Btn_Limpiar";
             this.Btn_Limpiar.Size = new System.Drawing.Size(213, 38);
             this.Btn_Limpiar.TabIndex = 15;
@@ -219,13 +232,14 @@ namespace PL.Pantalla
             this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
             this.Btn_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Eliminar.Image")));
             this.Btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Eliminar.Location = new System.Drawing.Point(906, 250);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(900, 205);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(213, 38);
             this.Btn_Eliminar.TabIndex = 14;
             this.Btn_Eliminar.Text = "Eliminar Datos";
             this.Btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Eliminar.UseVisualStyleBackColor = false;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
             // 
             // Btn_Editar
             // 
@@ -240,7 +254,7 @@ namespace PL.Pantalla
             this.Btn_Editar.ForeColor = System.Drawing.Color.White;
             this.Btn_Editar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Editar.Image")));
             this.Btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Editar.Location = new System.Drawing.Point(906, 167);
+            this.Btn_Editar.Location = new System.Drawing.Point(900, 122);
             this.Btn_Editar.Name = "Btn_Editar";
             this.Btn_Editar.Size = new System.Drawing.Size(213, 38);
             this.Btn_Editar.TabIndex = 13;
@@ -261,7 +275,7 @@ namespace PL.Pantalla
             this.Btn_Guardar.ForeColor = System.Drawing.Color.White;
             this.Btn_Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guardar.Image")));
             this.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Guardar.Location = new System.Drawing.Point(906, 80);
+            this.Btn_Guardar.Location = new System.Drawing.Point(900, 35);
             this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.Btn_Guardar.Name = "Btn_Guardar";
             this.Btn_Guardar.Padding = new System.Windows.Forms.Padding(0, 0, 11, 0);
@@ -278,7 +292,7 @@ namespace PL.Pantalla
             this.Telefono.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Telefono.Location = new System.Drawing.Point(636, 170);
             this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(194, 26);
+            this.Telefono.Size = new System.Drawing.Size(217, 26);
             this.Telefono.TabIndex = 10;
             this.Telefono.TextChanged += new System.EventHandler(this.Telefono_TextChanged);
             this.Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Telefono_KeyPress);
@@ -289,7 +303,7 @@ namespace PL.Pantalla
             this.Correo.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Correo.Location = new System.Drawing.Point(636, 83);
             this.Correo.Name = "Correo";
-            this.Correo.Size = new System.Drawing.Size(194, 26);
+            this.Correo.Size = new System.Drawing.Size(217, 26);
             this.Correo.TabIndex = 9;
             this.Correo.TextChanged += new System.EventHandler(this.Coreo_TextChanged);
             // 
@@ -383,31 +397,30 @@ namespace PL.Pantalla
             this.label1.TabIndex = 0;
             this.label1.Text = "Cédula:";
             // 
-            // alturaPolar_v2DataSet
-            // 
-   
-            // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataMember = "Usuarios";
-        
             // 
-            // usuariosTableAdapter
+            // Btn_Reporte
             // 
-          
-            // Cbo_Rol
-            // 
-            this.Cbo_Rol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbo_Rol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cbo_Rol.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cbo_Rol.FormattingEnabled = true;
-            this.Cbo_Rol.Items.AddRange(new object[] {
-            "Empleado",
-            "Administrador"});
-            this.Cbo_Rol.Location = new System.Drawing.Point(636, 257);
-            this.Cbo_Rol.Name = "Cbo_Rol";
-            this.Cbo_Rol.Size = new System.Drawing.Size(194, 30);
-            this.Cbo_Rol.TabIndex = 22;
+            this.Btn_Reporte.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Btn_Reporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_Reporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatAppearance.BorderSize = 0;
+            this.Btn_Reporte.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Reporte.ForeColor = System.Drawing.Color.White;
+            this.Btn_Reporte.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Reporte.Image")));
+            this.Btn_Reporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Reporte.Location = new System.Drawing.Point(900, 363);
+            this.Btn_Reporte.Name = "Btn_Reporte";
+            this.Btn_Reporte.Size = new System.Drawing.Size(237, 38);
+            this.Btn_Reporte.TabIndex = 23;
+            this.Btn_Reporte.Text = "Reporte Empleados";
+            this.Btn_Reporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btn_Reporte.UseVisualStyleBackColor = false;
+            this.Btn_Reporte.Click += new System.EventHandler(this.Btn_Reporte_Click);
             // 
             // Empleados
             // 
@@ -418,11 +431,9 @@ namespace PL.Pantalla
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Empleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Empleado)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -455,5 +466,6 @@ namespace PL.Pantalla
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         
         private System.Windows.Forms.ComboBox Cbo_Rol;
+        private System.Windows.Forms.Button Btn_Reporte;
     }
 }

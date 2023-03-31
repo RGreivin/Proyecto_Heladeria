@@ -27,7 +27,7 @@ namespace PL.Pantalla
             {
                 e.Handled = true;
                 Lbl_Message0.Text = "Solo se permiten números";
-                Lbl_Message0.Visible=true;
+                Lbl_Message0.Visible = true;
                 Lbl_Message0.ForeColor = Color.Yellow;
             }
             else
@@ -68,15 +68,23 @@ namespace PL.Pantalla
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
             GuardarDtos();
-        
-         }
+
+        }
         private void Btn_Editar_Click(object sender, EventArgs e)
         {
             EditEmpleados();
         }
+        private void Btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            EliminarDtos();
+        }
         private void Btn_Limpiar_Click(object sender, EventArgs e)
         {
             LimpiarTxt();
+        }
+        private void Btn_Reporte_Click(object sender, EventArgs e)
+        {
+            ReportEmpleados();
         }
 
         #endregion Termina los eventos del sistema
@@ -95,12 +103,12 @@ namespace PL.Pantalla
             Apellidos.Clear();
             Correo.Clear();
             Telefono.Clear();
-            Lbl_Message0.Visible=false;
-            Lbl_Message.Visible = false;   
+            Lbl_Message0.Visible = false;
+            Lbl_Message.Visible = false;
             Lbl_Message2.Visible = false;
             Lbl_Message3.Visible = false;
             Lbl_Message4.Visible = false;
-            
+
         }
         private void ValidarNombre()
         {
@@ -160,19 +168,19 @@ namespace PL.Pantalla
                 Lbl_Message4.Visible = true;
                 Lbl_Message4.ForeColor = Color.Green;
             }
-            
+
 
         }
         private void GuardarDtos()
         {
-            if (Cedula.Text == "" || Nombre.Text == "" || Apellidos.Text=="" || Correo.Text=="" || Telefono.Text==""|| Cbo_Rol.Text=="" )
+            if (Cedula.Text == "" || Nombre.Text == "" || Apellidos.Text == "" || Correo.Text == "" || Telefono.Text == "" || Cbo_Rol.Text == "")
             {
                 MessageBox.Show("No dejes Campos vacios, por favor");
             }
             else
             {
 
-                if (Lbl_Message.ForeColor == Color.Red || Lbl_Message2.ForeColor==Color.Red || Lbl_Message3.ForeColor==Color.Red)
+                if (Lbl_Message.ForeColor == Color.Red || Lbl_Message2.ForeColor == Color.Red || Lbl_Message3.ForeColor == Color.Red)
                 {
                     MessageBox.Show("No se puede guardar los datos");
                 }
@@ -181,11 +189,11 @@ namespace PL.Pantalla
                     try
                     {
                         MostrarDtosEmpleados ins = new MostrarDtosEmpleados();
-                        ins.EditEmpleados(Nombre.Text,Apellidos.Text,Correo.Text,Telefono.Text,Cbo_Rol.Text,Cedula.Text);
+                        ins.EditEmpleados(Nombre.Text, Apellidos.Text, Correo.Text, Telefono.Text, Cbo_Rol.Text, Cedula.Text);
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("No se pudo editar los datos"+ex);
+                        MessageBox.Show("No se pudo editar los datos" + ex);
                     }
 
                     MessageBox.Show("Datos Guardados, Exitosamente");
@@ -210,9 +218,33 @@ namespace PL.Pantalla
                 MessageBox.Show("Seleccione la fila que desea modificar");
             }
         }
+        private void EliminarDtos()
+        {
+            if (DGV_Empleado.SelectedRows.Count > 0)
+            {
+                Cedula.Enabled = false;
+                Cedula.Text = DGV_Empleado.CurrentRow.Cells["Cedula"].Value.ToString();
+                MostrarDtosEmpleados eliminar = new MostrarDtosEmpleados();
+                eliminar.EliminarEmpleados(Cedula.Text);
+                MessageBox.Show("Eliminado Correctamente");
+                Tbl_Empleados();
+                LimpiarTxt();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione la fila que desea modificar");
+            }
 
+           
+
+
+        }
+        private void ReportEmpleados()
+        {
+            Pantalla.ReporteEmpleado rport = new ReporteEmpleado();
+            rport.ShowDialog();
+        }
         #endregion
 
-   
     }
 }

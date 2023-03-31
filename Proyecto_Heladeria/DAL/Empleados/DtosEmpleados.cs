@@ -40,8 +40,19 @@ namespace DAL.Empleados
             comand.Parameters.AddWithValue("@Rol", rol);
             comand.Parameters.AddWithValue("@Cedula", ced);
             comand.ExecuteNonQuery();
+            comand.Parameters.Clear();
 
         }
+        public void EliminarDtos(int ced)
+        {
+            comand.Connection = conexion.AbrirConexion();
+            comand.CommandText = "ElimEmpleados";
+            comand.CommandType = CommandType.StoredProcedure;
+            comand.Parameters.AddWithValue("@Cedula", ced);
+            comand.ExecuteNonQuery();
+            comand.Parameters.Clear();
+        }
+
 
     }
 }

@@ -23,5 +23,9 @@ namespace BLL.Empleados
         {
             dtos.ModificarDtos(nombre, apellido, correo, Convert.ToInt32(telefono),rol ,Convert.ToInt32(ced));
         }
+        public void EliminarEmpleados(string ced)
+        {
+            dtos.EliminarDtos(Convert.ToInt32(ced));
+        }
     }
 }
