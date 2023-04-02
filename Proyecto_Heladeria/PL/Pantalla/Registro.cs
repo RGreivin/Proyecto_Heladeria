@@ -42,61 +42,45 @@ namespace PL.Pantalla
         private void ShowPassw_CheckedChanged(object sender, EventArgs e)
         {
             MostrarPassw();
+
+        }
+        private void Ced_TextChanged(object sender, EventArgs e)
+        {
+            //ValidarTelefono();
         }
         //Texbox Numerico
-        private void Ced_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void Ced_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+                Lbl_Message1.Text = "Solo se permiten números";
+                Lbl_Message1.Visible = true;
+                Lbl_Message1.ForeColor = Color.Yellow;
             }
+            
         }
-        private void Name_TextChanged(object sender, EventArgs e)
+        private void Nombre_TextChanged(object sender, EventArgs e)
         {
             ValidarNombres();
-
         }
-        private void Nombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-
-            {
-                e.Handled = true;
-
-                return;
-
-            }
-
-        }
-        private void Apellidos_TextChanged(object sender, EventArgs e)
+        private void Apellidos_TextChanged_1(object sender, EventArgs e)
         {
             ValidarApellido();
         }
-        private void Apellidos_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-
-            {
-                e.Handled = true;
-
-                return;
-
-            }
-        }
-        private void User_TextChanged(object sender, EventArgs e)
+        private void User_TextChanged_1(object sender, EventArgs e)
         {
             ValidarUser();
         }
-        private void Passw_TextChanged(object sender, EventArgs e)
+        private void Passw_TextChanged_1(object sender, EventArgs e)
         {
             ValidarPassword();
         }
-        private void Correo_TextChanged(object sender, EventArgs e)
+        private void Correo_TextChanged_1(object sender, EventArgs e)
         {
             ValidarEmail(Correo.Text);
         }
-
-        private void Telefono_TextChanged(object sender, EventArgs e)
+        private void Telefono_TextChanged_1(object sender, EventArgs e)
         {
             ValidarTelefono();
         }
@@ -105,8 +89,12 @@ namespace PL.Pantalla
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+                Lbl_Message7.Text = "Solo se permiten números";
+                Lbl_Message7.Visible = true;
+                Lbl_Message7.ForeColor = Color.Yellow;
             }
         }
+
         #endregion termina metodos del sistema
 
         #region Metodos genericos
@@ -124,28 +112,42 @@ namespace PL.Pantalla
         }
         private void GuardarDtos()
         {
-            if (Ced.Text=="" || Nombre.Text=="" || Apellidos.Text=="" || User.Text=="" || Passw.Text==""|| Correo.Text=="" || Telefono.Text=="")
+            if (Ced.Text == "" || Nombre.Text == "" || Apellidos.Text == "" || User.Text == "" || Passw.Text == "" || Correo.Text == "" || Telefono.Text == "")
             {
-                MessageBox.Show("No dejes campos vacios.");
+                MessageBox.Show("No dejes campos vacios", "Informative messages ",
+                  MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
             else
             {
-                if (ValidarEmail(Correo.Text) == false)
+                if (Lbl_Message2.ForeColor==Color.Red || Lbl_Message3.ForeColor == Color.Red || Lbl_Message4.ForeColor == Color.Red || Lbl_Message5.ForeColor == Color.Red)
                 {
-                    Lbl_Message.Text = "Correo Electronico invalido";
-                    Lbl_Message.ForeColor = Color.Red;
+                    MessageBox.Show("Los datos son correctos", "Error messages ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    Lbl_Message.Text = "Correo Electronico valido";
-                    Lbl_Message.ForeColor = Color.Green;
-                }
-                v_ins.Registro(Ced.Text,Nombre.Text,Apellidos.Text,User.Text,Passw.Text,Correo.Text,Telefono.Text,"");
-                MessageBox.Show("Datos Guardados, Regreses a la pagina anterior.");
-                LimpiarCampos();
-            }
+                    try
+                    {
+                        v_ins.Registro(Ced.Text, Nombre.Text, Apellidos.Text, User.Text, Passw.Text, Correo.Text, Telefono.Text, "");
+                       
+                    }catch(Exception ex)
+                    {
+                        
+                        MessageBox.Show("No se puede guardar los datos"+ex, "Informative messages ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-         }
+                    }
+
+                    MessageBox.Show("Datos Guardados, Regreses a la pagina anterior.");
+                    LimpiarCampos();
+                }
+
+            }
+               
+            
+
+        }
         private void LimpiarCampos()
         {
             Ced.Clear();
@@ -155,7 +157,14 @@ namespace PL.Pantalla
             Passw.Clear();
             Correo.Clear();
             Telefono.Clear();
-            Lbl_Message.Visible = false;
+            Lbl_Message1.Visible = false;
+            Lbl_Message2.Visible = false;
+            Lbl_Message3.Visible = false;
+            Lbl_Message4.Visible = false;
+            Lbl_Message5.Visible = false;
+            Lbl_Message6.Visible = false;
+            Lbl_Message7.Visible = false;
+
 
         }
         private void Regresar()
@@ -165,82 +174,98 @@ namespace PL.Pantalla
             Dispose();
         }
 
+
         private void ValidarNombres()
         {
-            if (Regex.IsMatch(Nombre.Text, @"^[a-zA-Z]+(([\'\,\.\- ]{2,}[a-zA-Z ])?[a-zA-Z]*)*$"))
+            if (Regex.IsMatch(Nombre.Text, @"^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$"))
             {
-                Lbl_Message.Text = "Nombre Correcto";
+                Lbl_Message2.Text = "Nombre Correcto";
+                Lbl_Message2.Visible = true;
+                Lbl_Message2.ForeColor = Color.Green;
             }
             else
             {
-                Lbl_Message.Text = "Nombre Incorrecto";
+                Lbl_Message2.Text = "Nombre Incorrecto";
+                Lbl_Message2.Visible = true;
+                Lbl_Message2.ForeColor = Color.Red;
             }
         }
+
         private void ValidarApellido()
         {
             if (Regex.IsMatch(Apellidos.Text, @"^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$"))
             {
-                Lbl_Message.Text = "Apellido Correctos";
+                Lbl_Message3.Text = "Apellido/s Correctos";
+                Lbl_Message3.Visible = true;
+                Lbl_Message3.ForeColor = Color.Green;
             }
             else
             {
-                Lbl_Message.Text = "Apellido Incorrecto";
+                Lbl_Message3.Text = "Apellido/s Incorrecto";
+                Lbl_Message3.Visible = true;
+                Lbl_Message3.ForeColor = Color.Red;
             }
         }
         private void ValidarUser()
         {
             if (Regex.IsMatch(User.Text, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$"))
             {
-                Lbl_Message.Text = "Usuario Correcto";
+                Lbl_Message4.Text = "Usuario Correcto";
+                Lbl_Message4.Visible = true;
+                Lbl_Message4.ForeColor = Color.Green;
             }
             else
             {
-                Lbl_Message.Text = "Usuario Incorrecto";
+                Lbl_Message4.Text = "Usuario Incorrecto";
+                Lbl_Message4.Visible = true;
+                Lbl_Message4.ForeColor = Color.Red;
             }
         }
         private void ValidarPassword()
         {
             if (Regex.IsMatch(Passw.Text, @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$"))
             {
-                Lbl_Message.Text = "Contraseña Correcta";
+                Lbl_Message5.Text = "Contraseña Correcta";
+                Lbl_Message5.Visible = true;
+                Lbl_Message5.ForeColor =Color.Green;
             }
             else
             {
-                Lbl_Message.Text = "Contraseña Incorrecta";
+                Lbl_Message5.Text = "Contraseña Incorrecta";
+                Lbl_Message5.Visible = true;
+                Lbl_Message5.ForeColor = Color.Red;
             }
         }
-        private static bool ValidarEmail(string correo)
+        private void ValidarEmail(string correo)
         {
             string emailFormato;
             emailFormato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
             if (Regex.IsMatch(correo, emailFormato))
             {
-                if (Regex.Replace(correo, emailFormato, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                Lbl_Message6.Text = "Es un Correo valido!";
+                Lbl_Message6.Visible = true;
+                Lbl_Message6.ForeColor = Color.Green;
             }
             else
             {
-                return false;
+                if (Regex.Replace(correo, emailFormato, String.Empty).Length == 0)
+                {
+                    Lbl_Message6.Text = "No es un Correo valido!";
+                    Lbl_Message6.Visible = true;
+                    Lbl_Message6.ForeColor = Color.Red;
+                }
             }
         }
-            private void ValidarTelefono()
+        private void ValidarTelefono()
+        {
+            if (Regex.IsMatch(Telefono.Text, @"^[5-9]\d{3}-?\d{4}$"))
             {
-                if (Regex.IsMatch(Telefono.Text, @"^[5-9]\d{3}-?\d{4}$"))
-                {
-                    Lbl_Message.Text = "Telefono Correcto";
-                }
-                else
-                {
-                    Lbl_Message.Text = "Telefono Incorrecto";
-                }
-                
+                Lbl_Message7.Text = "Teléfono Correcto";
+                Lbl_Message7.Visible = true;
+                Lbl_Message7.ForeColor = Color.Green;
             }
+
+        }
         #endregion termina los metodos genericos
 
         #region metodos handler del evento enter
@@ -263,39 +288,37 @@ namespace PL.Pantalla
                 }
             }
         }
-            private void Txt_Leave(object sender, EventArgs e)
-            {
-                //Hace referencia al objeto que dispara el evento
-                //En este caso el textbox que esta activo
-                TextBox txt = sender as TextBox;
+        private void Txt_Leave(object sender, EventArgs e)
+        {
+            //Hace referencia al objeto que dispara el evento
+            //En este caso el textbox que esta activo
+            TextBox txt = sender as TextBox;
 
-                //Recorremos todos los controles que se encuentran dentro del panel
-                foreach (Control ctrl in pContaniner.Controls)
+            //Recorremos todos los controles que se encuentran dentro del panel
+            foreach (Control ctrl in pContaniner.Controls)
+            {
+                /*
+                 * Si es un Panel y el nombre del Panel es "p"
+                 * concatenamos el name del textbox 
+                 */
+                if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
                 {
-                    /*
-                     * Si es un Panel y el nombre del Panel es "p"
-                     * concatenamos el name del textbox 
-                     */
-                    if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
+                    if (txt.Text == string.Empty)
                     {
-                        if (txt.Text == string.Empty)
-                        {
-                            ctrl.BackColor = Color.Red;
-                        }
-                        else
-                        {
-                            //cambiar el color
-                            ctrl.BackColor = Color.DarkGray;
-                        }
+                        ctrl.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        //cambiar el color
+                        ctrl.BackColor = Color.DarkGray;
                     }
                 }
             }
-
-
+        }
 
 
         #endregion Termina handler del evento enter
 
-       
+      
     }
-    }
+ }

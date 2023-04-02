@@ -30,12 +30,6 @@ namespace PL.Pantalla
                 Lbl_Message0.Visible = true;
                 Lbl_Message0.ForeColor = Color.Yellow;
             }
-            else
-            {
-                Lbl_Message0.Text = "Cédula es valida!";
-                Lbl_Message0.Visible = true;
-                Lbl_Message0.ForeColor = Color.Green;
-            }
 
         }
         private void Nombre_TextChanged(object sender, EventArgs e)
@@ -246,5 +240,6 @@ namespace PL.Pantalla
         }
         #endregion
 
+       
     }
 }

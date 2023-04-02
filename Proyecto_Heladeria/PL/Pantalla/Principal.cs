@@ -50,6 +50,7 @@ namespace PL.Pantalla
         private void Btn_Products_Click(object sender, EventArgs e)
         {
             InventarioProducts();
+            AbrirForm(new InventProducts());
         }
         private void Btn_Promociones_Click(object sender, EventArgs e)
         {
@@ -162,3 +163,8 @@ namespace PL.Pantalla
         
     }
 }
+/*
+ * Para usar el reportViewer para guardar pdf hay que ir propiedades  en la capa de presentacion ,
+ * 1.configuracion propiedades/configuracion  
+ * 2.debug  cambiarlo  64 
+ */

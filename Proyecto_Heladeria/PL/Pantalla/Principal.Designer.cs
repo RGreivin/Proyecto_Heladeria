@@ -42,6 +42,8 @@ namespace PL.Pantalla
             this.Button_Closed = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_main = new System.Windows.Forms.Panel();
             this.Panel_Options = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Btn_Inicio = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Btn_Login = new Bunifu.Framework.UI.BunifuFlatButton();
             this.P_SubMenu = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -70,8 +72,6 @@ namespace PL.Pantalla
             this.Logo_Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.Tt_Mensaje = new System.Windows.Forms.ToolTip(this.components);
             this.hora_Fecha = new System.Windows.Forms.Timer(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.Btn_Inicio = new Bunifu.Framework.UI.BunifuFlatButton();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -103,7 +103,7 @@ namespace PL.Pantalla
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1527, 35);
+            this.header.Size = new System.Drawing.Size(1531, 35);
             this.header.TabIndex = 0;
             // 
             // label2
@@ -122,12 +122,14 @@ namespace PL.Pantalla
             // 
             // Btn_Minimizar
             // 
+            this.Btn_Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Minimizar.BackColor = System.Drawing.SystemColors.Highlight;
             this.Logo_Transition.SetDecoration(this.Btn_Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Panel_Transition.SetDecoration(this.Btn_Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Btn_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minimizar.Image")));
             this.Btn_Minimizar.ImageActive = null;
-            this.Btn_Minimizar.Location = new System.Drawing.Point(1351, 2);
+            this.Btn_Minimizar.Location = new System.Drawing.Point(1351, 3);
             this.Btn_Minimizar.Name = "Btn_Minimizar";
             this.Btn_Minimizar.Size = new System.Drawing.Size(58, 33);
             this.Btn_Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,6 +140,8 @@ namespace PL.Pantalla
             // 
             // bunifuImageButton1
             // 
+            this.bunifuImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuImageButton1.BackColor = System.Drawing.SystemColors.Highlight;
             this.Logo_Transition.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
             this.Panel_Transition.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
@@ -169,6 +173,8 @@ namespace PL.Pantalla
             // 
             // Button_Closed
             // 
+            this.Button_Closed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_Closed.BackColor = System.Drawing.SystemColors.Highlight;
             this.Logo_Transition.SetDecoration(this.Button_Closed, BunifuAnimatorNS.DecorationType.None);
             this.Panel_Transition.SetDecoration(this.Button_Closed, BunifuAnimatorNS.DecorationType.None);
@@ -192,7 +198,7 @@ namespace PL.Pantalla
             this.Panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_main.Location = new System.Drawing.Point(258, 35);
             this.Panel_main.Name = "Panel_main";
-            this.Panel_main.Size = new System.Drawing.Size(1269, 871);
+            this.Panel_main.Size = new System.Drawing.Size(1273, 871);
             this.Panel_main.TabIndex = 2;
             // 
             // Panel_Options
@@ -218,6 +224,57 @@ namespace PL.Pantalla
             this.Panel_Options.Name = "Panel_Options";
             this.Panel_Options.Size = new System.Drawing.Size(258, 871);
             this.Panel_Options.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Panel_Transition.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
+            this.Logo_Transition.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
+            this.panel4.Location = new System.Drawing.Point(-3, 373);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(6, 51);
+            this.panel4.TabIndex = 10;
+            // 
+            // Btn_Inicio
+            // 
+            this.Btn_Inicio.Activecolor = System.Drawing.Color.Transparent;
+            this.Btn_Inicio.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.Btn_Inicio.BackColor = System.Drawing.Color.Black;
+            this.Btn_Inicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Inicio.BorderRadius = 0;
+            this.Btn_Inicio.ButtonText = "Inicio";
+            this.Btn_Inicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Logo_Transition.SetDecoration(this.Btn_Inicio, BunifuAnimatorNS.DecorationType.None);
+            this.Panel_Transition.SetDecoration(this.Btn_Inicio, BunifuAnimatorNS.DecorationType.None);
+            this.Btn_Inicio.DisabledColor = System.Drawing.Color.Transparent;
+            this.Btn_Inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Inicio.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_Inicio.Iconcolor = System.Drawing.Color.Transparent;
+            this.Btn_Inicio.Iconimage = ((System.Drawing.Image)(resources.GetObject("Btn_Inicio.Iconimage")));
+            this.Btn_Inicio.Iconimage_right = null;
+            this.Btn_Inicio.Iconimage_right_Selected = null;
+            this.Btn_Inicio.Iconimage_Selected = null;
+            this.Btn_Inicio.IconMarginLeft = 15;
+            this.Btn_Inicio.IconMarginRight = 3;
+            this.Btn_Inicio.IconRightVisible = false;
+            this.Btn_Inicio.IconRightZoom = 0D;
+            this.Btn_Inicio.IconVisible = true;
+            this.Btn_Inicio.IconZoom = 85D;
+            this.Btn_Inicio.IsTab = false;
+            this.Btn_Inicio.Location = new System.Drawing.Point(-3, 373);
+            this.Btn_Inicio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Btn_Inicio.Name = "Btn_Inicio";
+            this.Btn_Inicio.Normalcolor = System.Drawing.Color.Black;
+            this.Btn_Inicio.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Btn_Inicio.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.Btn_Inicio.selected = false;
+            this.Btn_Inicio.Size = new System.Drawing.Size(261, 53);
+            this.Btn_Inicio.TabIndex = 11;
+            this.Btn_Inicio.Text = "Inicio";
+            this.Btn_Inicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Inicio.Textcolor = System.Drawing.Color.White;
+            this.Btn_Inicio.TextFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Inicio.Click += new System.EventHandler(this.Btn_Inicio_Click);
             // 
             // Btn_Login
             // 
@@ -279,7 +336,7 @@ namespace PL.Pantalla
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.Panel_Transition.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
             this.Logo_Transition.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
-            this.panel6.Location = new System.Drawing.Point(3, 76);
+            this.panel6.Location = new System.Drawing.Point(3, 79);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(6, 51);
             this.panel6.TabIndex = 9;
@@ -310,7 +367,7 @@ namespace PL.Pantalla
             this.Btn_Promociones.IconVisible = true;
             this.Btn_Promociones.IconZoom = 60D;
             this.Btn_Promociones.IsTab = false;
-            this.Btn_Promociones.Location = new System.Drawing.Point(7, 75);
+            this.Btn_Promociones.Location = new System.Drawing.Point(7, 78);
             this.Btn_Promociones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Btn_Promociones.Name = "Btn_Promociones";
             this.Btn_Promociones.Normalcolor = System.Drawing.Color.Black;
@@ -330,7 +387,7 @@ namespace PL.Pantalla
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.Panel_Transition.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
             this.Logo_Transition.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
-            this.panel5.Location = new System.Drawing.Point(3, 6);
+            this.panel5.Location = new System.Drawing.Point(4, 11);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(6, 51);
             this.panel5.TabIndex = 7;
@@ -361,7 +418,7 @@ namespace PL.Pantalla
             this.Btn_Products.IconVisible = true;
             this.Btn_Products.IconZoom = 60D;
             this.Btn_Products.IsTab = false;
-            this.Btn_Products.Location = new System.Drawing.Point(8, 6);
+            this.Btn_Products.Location = new System.Drawing.Point(9, 11);
             this.Btn_Products.Margin = new System.Windows.Forms.Padding(5);
             this.Btn_Products.Name = "Btn_Products";
             this.Btn_Products.Normalcolor = System.Drawing.Color.Black;
@@ -753,70 +810,19 @@ namespace PL.Pantalla
             this.hora_Fecha.Enabled = true;
             this.hora_Fecha.Tick += new System.EventHandler(this.Hora_Fecha_Tick);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.Panel_Transition.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.Logo_Transition.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.panel4.Location = new System.Drawing.Point(-3, 373);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(6, 51);
-            this.panel4.TabIndex = 10;
-            // 
-            // Btn_Inicio
-            // 
-            this.Btn_Inicio.Activecolor = System.Drawing.Color.Transparent;
-            this.Btn_Inicio.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.Btn_Inicio.BackColor = System.Drawing.Color.Black;
-            this.Btn_Inicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Inicio.BorderRadius = 0;
-            this.Btn_Inicio.ButtonText = "Inicio";
-            this.Btn_Inicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Logo_Transition.SetDecoration(this.Btn_Inicio, BunifuAnimatorNS.DecorationType.None);
-            this.Panel_Transition.SetDecoration(this.Btn_Inicio, BunifuAnimatorNS.DecorationType.None);
-            this.Btn_Inicio.DisabledColor = System.Drawing.Color.Transparent;
-            this.Btn_Inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Inicio.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_Inicio.Iconcolor = System.Drawing.Color.Transparent;
-            this.Btn_Inicio.Iconimage = ((System.Drawing.Image)(resources.GetObject("Btn_Inicio.Iconimage")));
-            this.Btn_Inicio.Iconimage_right = null;
-            this.Btn_Inicio.Iconimage_right_Selected = null;
-            this.Btn_Inicio.Iconimage_Selected = null;
-            this.Btn_Inicio.IconMarginLeft = 15;
-            this.Btn_Inicio.IconMarginRight = 3;
-            this.Btn_Inicio.IconRightVisible = false;
-            this.Btn_Inicio.IconRightZoom = 0D;
-            this.Btn_Inicio.IconVisible = true;
-            this.Btn_Inicio.IconZoom = 85D;
-            this.Btn_Inicio.IsTab = false;
-            this.Btn_Inicio.Location = new System.Drawing.Point(-3, 373);
-            this.Btn_Inicio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Btn_Inicio.Name = "Btn_Inicio";
-            this.Btn_Inicio.Normalcolor = System.Drawing.Color.Black;
-            this.Btn_Inicio.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.Btn_Inicio.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.Btn_Inicio.selected = false;
-            this.Btn_Inicio.Size = new System.Drawing.Size(261, 53);
-            this.Btn_Inicio.TabIndex = 11;
-            this.Btn_Inicio.Text = "Inicio";
-            this.Btn_Inicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Inicio.Textcolor = System.Drawing.Color.White;
-            this.Btn_Inicio.TextFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Inicio.Click += new System.EventHandler(this.Btn_Inicio_Click);
-            // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1527, 906);
+            this.ClientSize = new System.Drawing.Size(1531, 906);
             this.Controls.Add(this.Panel_main);
             this.Controls.Add(this.Panel_Options);
             this.Controls.Add(this.header);
             this.Logo_Transition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Panel_Transition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";

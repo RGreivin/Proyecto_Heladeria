@@ -75,7 +75,6 @@ C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\ob
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\PL.Pantalla.Recuperar_Dtos.resources
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\PL.Pantalla.Registro.resources
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\PL.Pantalla.ReporteEmpleado.resources
-C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\PL.Pantalla.Secundario.resources
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\PL.Properties.Resources.resources
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\Capa Presentacion (PL).csproj.GenerateResource.cache
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\RdlCompile.cache
@@ -84,3 +83,4 @@ C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\ob
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\Capa Presentacion (PL).csproj.CopyComplete
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\PL.exe
 C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\PL.pdb
+C:\Users\andre\Source\Repos\RGreivin\Proyecto_Heladeria\Proyecto_Heladeria\PL\obj\x64\Debug\PL.Pantalla.InventProducts.resources

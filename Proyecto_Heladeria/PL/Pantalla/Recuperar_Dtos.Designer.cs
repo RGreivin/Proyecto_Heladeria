@@ -29,12 +29,14 @@ namespace PL.Pantalla
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recuperar_Dtos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Btn_Regresar = new System.Windows.Forms.Button();
             this.pContainer = new System.Windows.Forms.Panel();
+            this.Lbl_Msj = new System.Windows.Forms.Label();
             this.Lbl_Message = new System.Windows.Forms.Label();
             this.pTelefono = new System.Windows.Forms.Panel();
             this.Telefono = new System.Windows.Forms.TextBox();
@@ -44,7 +46,7 @@ namespace PL.Pantalla
             this.Email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Lbl_Msj = new System.Windows.Forms.Label();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pContainer.SuspendLayout();
@@ -120,6 +122,19 @@ namespace PL.Pantalla
             this.pContainer.Name = "pContainer";
             this.pContainer.Size = new System.Drawing.Size(481, 266);
             this.pContainer.TabIndex = 4;
+            // 
+            // Lbl_Msj
+            // 
+            this.Lbl_Msj.AutoSize = true;
+            this.Lbl_Msj.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_Msj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Msj.ForeColor = System.Drawing.Color.White;
+            this.Lbl_Msj.Location = new System.Drawing.Point(96, 213);
+            this.Lbl_Msj.Name = "Lbl_Msj";
+            this.Lbl_Msj.Size = new System.Drawing.Size(51, 20);
+            this.Lbl_Msj.TabIndex = 22;
+            this.Lbl_Msj.Text = "label4";
+            this.Lbl_Msj.Visible = false;
             // 
             // Lbl_Message
             // 
@@ -231,18 +246,12 @@ namespace PL.Pantalla
             this.label2.TabIndex = 13;
             this.label2.Text = "Correo:";
             // 
-            // Lbl_Msj
+            // bunifuDragControl1
             // 
-            this.Lbl_Msj.AutoSize = true;
-            this.Lbl_Msj.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Msj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Msj.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Msj.Location = new System.Drawing.Point(96, 213);
-            this.Lbl_Msj.Name = "Lbl_Msj";
-            this.Lbl_Msj.Size = new System.Drawing.Size(51, 20);
-            this.Lbl_Msj.TabIndex = 22;
-            this.Lbl_Msj.Text = "label4";
-            this.Lbl_Msj.Visible = false;
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // Recuperar_Dtos
             // 
@@ -254,6 +263,7 @@ namespace PL.Pantalla
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Recuperar_Dtos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar_Dtos";
@@ -283,5 +293,6 @@ namespace PL.Pantalla
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Lbl_Message;
         private System.Windows.Forms.Label Lbl_Msj;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

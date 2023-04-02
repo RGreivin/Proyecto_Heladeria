@@ -80,10 +80,13 @@ namespace PL.Pantalla
             this.report_empleados.LocalReport.DataSources.Add(reportDataSource1);
             this.report_empleados.LocalReport.ReportEmbeddedResource = "PL.Pantalla.ReportEmpleado.rdlc";
             this.report_empleados.Location = new System.Drawing.Point(0, 0);
+            this.report_empleados.Margin = new System.Windows.Forms.Padding(0);
             this.report_empleados.Name = "report_empleados";
+            this.report_empleados.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual;
             this.report_empleados.ServerReport.BearerToken = null;
-            this.report_empleados.Size = new System.Drawing.Size(986, 573);
+            this.report_empleados.Size = new System.Drawing.Size(690, 410);
             this.report_empleados.TabIndex = 0;
+            this.report_empleados.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // usuariosBindingSource1
             // 
@@ -99,7 +102,7 @@ namespace PL.Pantalla
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(986, 573);
+            this.ClientSize = new System.Drawing.Size(690, 410);
             this.Controls.Add(this.report_empleados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ReporteEmpleado";

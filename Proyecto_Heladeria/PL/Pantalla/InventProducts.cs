@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PL.Pantalla
 {
-    public partial class Secundario : Form
+    public partial class InventProducts : Form
     {
-        public Secundario(string nombre, string apellido, string rol)
+        public InventProducts()
         {
             InitializeComponent();
-            Lbl_Msj.Text= nombre + apellido;
         }
     }
 }
