@@ -97,9 +97,9 @@ namespace PL.Pantalla
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Font = new System.Drawing.Font("Forte", 20.25F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(0, 409);
+            this.groupBox1.Location = new System.Drawing.Point(0, 422);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1273, 462);
+            this.groupBox1.Size = new System.Drawing.Size(1273, 449);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inventario Productos";
@@ -108,7 +108,7 @@ namespace PL.Pantalla
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 107);
+            this.label1.Location = new System.Drawing.Point(55, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 34);
             this.label1.TabIndex = 0;
@@ -118,7 +118,7 @@ namespace PL.Pantalla
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(86, 184);
+            this.label2.Location = new System.Drawing.Point(50, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 34);
             this.label2.TabIndex = 1;
@@ -128,7 +128,7 @@ namespace PL.Pantalla
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 258);
+            this.label3.Location = new System.Drawing.Point(50, 249);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 34);
             this.label3.TabIndex = 2;
@@ -161,14 +161,14 @@ namespace PL.Pantalla
             this.DGV_InventProduct.GridColor = System.Drawing.SystemColors.Control;
             this.DGV_InventProduct.Location = new System.Drawing.Point(0, 0);
             this.DGV_InventProduct.Name = "DGV_InventProduct";
-            this.DGV_InventProduct.Size = new System.Drawing.Size(1273, 432);
+            this.DGV_InventProduct.Size = new System.Drawing.Size(1273, 453);
             this.DGV_InventProduct.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(86, 338);
+            this.label4.Location = new System.Drawing.Point(50, 329);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 34);
             this.label4.TabIndex = 3;
@@ -178,7 +178,7 @@ namespace PL.Pantalla
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F);
-            this.label5.Location = new System.Drawing.Point(576, 107);
+            this.label5.Location = new System.Drawing.Point(540, 98);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 34);
             this.label5.TabIndex = 4;
@@ -188,7 +188,7 @@ namespace PL.Pantalla
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F);
-            this.label6.Location = new System.Drawing.Point(588, 184);
+            this.label6.Location = new System.Drawing.Point(552, 175);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 34);
             this.label6.TabIndex = 5;
@@ -198,7 +198,7 @@ namespace PL.Pantalla
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(319, 111);
+            this.textBox1.Location = new System.Drawing.Point(283, 102);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(186, 26);
             this.textBox1.TabIndex = 6;
@@ -207,7 +207,7 @@ namespace PL.Pantalla
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(319, 191);
+            this.textBox2.Location = new System.Drawing.Point(283, 182);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(186, 26);
             this.textBox2.TabIndex = 7;
@@ -216,7 +216,7 @@ namespace PL.Pantalla
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(319, 265);
+            this.textBox3.Location = new System.Drawing.Point(283, 256);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(186, 26);
             this.textBox3.TabIndex = 8;
@@ -225,7 +225,7 @@ namespace PL.Pantalla
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(319, 345);
+            this.textBox4.Location = new System.Drawing.Point(283, 336);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(186, 26);
             this.textBox4.TabIndex = 9;
@@ -234,7 +234,7 @@ namespace PL.Pantalla
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(815, 111);
+            this.textBox5.Location = new System.Drawing.Point(779, 102);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(186, 26);
             this.textBox5.TabIndex = 10;
@@ -243,7 +243,7 @@ namespace PL.Pantalla
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(815, 191);
+            this.textBox6.Location = new System.Drawing.Point(779, 182);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(186, 26);
             this.textBox6.TabIndex = 11;
@@ -252,7 +252,7 @@ namespace PL.Pantalla
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F);
-            this.label7.Location = new System.Drawing.Point(588, 261);
+            this.label7.Location = new System.Drawing.Point(552, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 34);
             this.label7.TabIndex = 12;
@@ -262,7 +262,7 @@ namespace PL.Pantalla
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 20.25F);
-            this.label8.Location = new System.Drawing.Point(588, 344);
+            this.label8.Location = new System.Drawing.Point(552, 335);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(191, 34);
             this.label8.TabIndex = 14;
@@ -273,9 +273,9 @@ namespace PL.Pantalla
             this.bunifuDatepicker1.BackColor = System.Drawing.Color.SeaGreen;
             this.bunifuDatepicker1.BorderRadius = 0;
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(815, 258);
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(779, 249);
             this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
             this.bunifuDatepicker1.Size = new System.Drawing.Size(186, 36);
@@ -287,9 +287,9 @@ namespace PL.Pantalla
             this.bunifuDatepicker2.BackColor = System.Drawing.Color.SeaGreen;
             this.bunifuDatepicker2.BorderRadius = 0;
             this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(815, 335);
+            this.bunifuDatepicker2.Location = new System.Drawing.Point(779, 326);
             this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bunifuDatepicker2.Name = "bunifuDatepicker2";
             this.bunifuDatepicker2.Size = new System.Drawing.Size(186, 36);
@@ -299,6 +299,7 @@ namespace PL.Pantalla
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
@@ -317,7 +318,7 @@ namespace PL.Pantalla
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(1022, 89);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(1019, 60);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -334,6 +335,7 @@ namespace PL.Pantalla
             // bunifuFlatButton2
             // 
             this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
@@ -352,7 +354,7 @@ namespace PL.Pantalla
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(1022, 166);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(1019, 137);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -369,6 +371,7 @@ namespace PL.Pantalla
             // bunifuFlatButton3
             // 
             this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
@@ -387,7 +390,7 @@ namespace PL.Pantalla
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(1022, 243);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(1019, 214);
             this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -404,6 +407,7 @@ namespace PL.Pantalla
             // bunifuFlatButton4
             // 
             this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 0;
@@ -422,7 +426,7 @@ namespace PL.Pantalla
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(1022, 312);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(1019, 283);
             this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -439,6 +443,7 @@ namespace PL.Pantalla
             // bunifuFlatButton5
             // 
             this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton5.BorderRadius = 0;
@@ -457,7 +462,7 @@ namespace PL.Pantalla
             this.bunifuFlatButton5.IconVisible = true;
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(1022, 384);
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(1019, 355);
             this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
