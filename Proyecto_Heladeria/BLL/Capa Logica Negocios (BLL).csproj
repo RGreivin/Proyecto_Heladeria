@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Empleados\MostrarDtosEmpleados.cs" />
+    <Compile Include="ImvemtarioProduct\Productos.cs" />
     <Compile Include="Login\Login_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro\RegistroUser.cs" />

@@ -66,7 +66,6 @@ namespace PL.Pantalla
             // DGV_Empleado
             // 
             this.DGV_Empleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGV_Empleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_Empleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.DGV_Empleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -79,9 +78,9 @@ namespace PL.Pantalla
             this.DGV_Empleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_Empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -90,7 +89,7 @@ namespace PL.Pantalla
             this.DGV_Empleado.GridColor = System.Drawing.SystemColors.Control;
             this.DGV_Empleado.Location = new System.Drawing.Point(0, 0);
             this.DGV_Empleado.Name = "DGV_Empleado";
-            this.DGV_Empleado.Size = new System.Drawing.Size(1197, 474);
+            this.DGV_Empleado.Size = new System.Drawing.Size(1197, 475);
             this.DGV_Empleado.TabIndex = 0;
             // 
             // groupBox1

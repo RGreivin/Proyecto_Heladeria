@@ -68,6 +68,10 @@ namespace PL.Pantalla
         {
             AbrirForm(new InicioPrincipal());
         }
+        private void Btn_Ventas_Click(object sender, EventArgs e)
+        {
+            //AbrirForm(new InventProducts());
+        }
         #endregion Finaliza los metodos del sistema
 
         #region Metodos genericos
@@ -92,7 +96,7 @@ namespace PL.Pantalla
 
         private void MenuLateral()
         {
-            if (Panel_Options.Width == 55)
+            if (Panel_Options.Width == 55 )
             {
                 Panel_Options.Visible = false;
                 Panel_Options.Width = 265;
@@ -158,9 +162,10 @@ namespace PL.Pantalla
 
 
 
+
         #endregion
 
-        
+      
     }
 }
 /*
