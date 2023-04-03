@@ -104,6 +104,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlturaPolar_v2DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AlturaPolar_v2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlturaPolar_v2DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Pantalla\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +163,12 @@
     <Compile Include="Pantalla\ReporteEmpleado.Designer.cs">
       <DependentUpon>ReporteEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantalla\Reporte_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla\Reporte_Productos.Designer.cs">
+      <DependentUpon>Reporte_Productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -189,6 +200,10 @@
       <DependentUpon>ReporteEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla\ReportEmpleado.rdlc" />
+    <EmbeddedResource Include="Pantalla\Reporte_Productos.resx">
+      <DependentUpon>Reporte_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla\Report_InventarioProducts.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -197,6 +212,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AlturaPolar_v2.xsc">
       <DependentUpon>AlturaPolar_v2.xsd</DependentUpon>
@@ -231,6 +247,17 @@
     <None Include="AlturaPolar_v2DataSet1.xss">
       <DependentUpon>AlturaPolar_v2DataSet1.xsd</DependentUpon>
     </None>
+    <None Include="AlturaPolar_v2DataSet2.xsc">
+      <DependentUpon>AlturaPolar_v2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AlturaPolar_v2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlturaPolar_v2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlturaPolar_v2DataSet2.xss">
+      <DependentUpon>AlturaPolar_v2DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -247,6 +274,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Img\AdobeStock_209446683_Preview.jpeg" />
+    <None Include="Img\icons8_edit_property_32px.png" />
+    <None Include="Img\icons8_Delete_List_32px.png" />
+    <None Include="Img\icons8_edit_property_32px_1.png" />
+    <None Include="Img\icons8_erase_32px_1.png" />
+    <None Include="Img\icons8_document_32px.png" />
     <Content Include="Img\MicrosoftTeams-image %2810%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

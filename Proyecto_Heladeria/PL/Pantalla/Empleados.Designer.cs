@@ -35,17 +35,12 @@ namespace PL.Pantalla
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.DGV_Empleado = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Btn_Reporte = new System.Windows.Forms.Button();
             this.Cbo_Rol = new System.Windows.Forms.ComboBox();
             this.Lbl_Message0 = new System.Windows.Forms.Label();
             this.Lbl_Message4 = new System.Windows.Forms.Label();
             this.Lbl_Message3 = new System.Windows.Forms.Label();
             this.Lbl_Message2 = new System.Windows.Forms.Label();
             this.Lbl_Message = new System.Windows.Forms.Label();
-            this.Btn_Limpiar = new System.Windows.Forms.Button();
-            this.Btn_Eliminar = new System.Windows.Forms.Button();
-            this.Btn_Editar = new System.Windows.Forms.Button();
-            this.Btn_Guardar = new System.Windows.Forms.Button();
             this.Telefono = new System.Windows.Forms.TextBox();
             this.Correo = new System.Windows.Forms.TextBox();
             this.Apellidos = new System.Windows.Forms.TextBox();
@@ -57,6 +52,11 @@ namespace PL.Pantalla
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btn_Reporte = new System.Windows.Forms.Button();
+            this.Btn_Limpiar = new System.Windows.Forms.Button();
+            this.Btn_Eliminar = new System.Windows.Forms.Button();
+            this.Btn_Editar = new System.Windows.Forms.Button();
+            this.Btn_Guardar = new System.Windows.Forms.Button();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Empleado)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,7 +89,7 @@ namespace PL.Pantalla
             this.DGV_Empleado.GridColor = System.Drawing.SystemColors.Control;
             this.DGV_Empleado.Location = new System.Drawing.Point(0, 0);
             this.DGV_Empleado.Name = "DGV_Empleado";
-            this.DGV_Empleado.Size = new System.Drawing.Size(1197, 475);
+            this.DGV_Empleado.Size = new System.Drawing.Size(1197, 477);
             this.DGV_Empleado.TabIndex = 0;
             // 
             // groupBox1
@@ -121,35 +121,12 @@ namespace PL.Pantalla
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(0, 458);
+            this.groupBox1.Location = new System.Drawing.Point(0, 460);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1197, 413);
+            this.groupBox1.Size = new System.Drawing.Size(1197, 411);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Empleado";
-            // 
-            // Btn_Reporte
-            // 
-            this.Btn_Reporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Reporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.Btn_Reporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Reporte.FlatAppearance.BorderSize = 0;
-            this.Btn_Reporte.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Reporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Reporte.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Reporte.ForeColor = System.Drawing.Color.White;
-            this.Btn_Reporte.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Reporte.Image")));
-            this.Btn_Reporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Reporte.Location = new System.Drawing.Point(900, 332);
-            this.Btn_Reporte.Name = "Btn_Reporte";
-            this.Btn_Reporte.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.Btn_Reporte.Size = new System.Drawing.Size(213, 38);
-            this.Btn_Reporte.TabIndex = 23;
-            this.Btn_Reporte.Text = "Crear Reporte";
-            this.Btn_Reporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Reporte.UseVisualStyleBackColor = false;
-            this.Btn_Reporte.Click += new System.EventHandler(this.Btn_Reporte_Click);
             // 
             // Cbo_Rol
             // 
@@ -160,7 +137,7 @@ namespace PL.Pantalla
             this.Cbo_Rol.Items.AddRange(new object[] {
             "Empleado",
             "Administrador"});
-            this.Cbo_Rol.Location = new System.Drawing.Point(620, 282);
+            this.Cbo_Rol.Location = new System.Drawing.Point(639, 284);
             this.Cbo_Rol.Name = "Cbo_Rol";
             this.Cbo_Rol.Size = new System.Drawing.Size(217, 30);
             this.Cbo_Rol.TabIndex = 22;
@@ -169,7 +146,7 @@ namespace PL.Pantalla
             // 
             this.Lbl_Message0.AutoSize = true;
             this.Lbl_Message0.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.Lbl_Message0.Location = new System.Drawing.Point(179, 153);
+            this.Lbl_Message0.Location = new System.Drawing.Point(198, 155);
             this.Lbl_Message0.Name = "Lbl_Message0";
             this.Lbl_Message0.Size = new System.Drawing.Size(54, 22);
             this.Lbl_Message0.TabIndex = 21;
@@ -180,7 +157,7 @@ namespace PL.Pantalla
             // 
             this.Lbl_Message4.AutoSize = true;
             this.Lbl_Message4.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Message4.Location = new System.Drawing.Point(616, 237);
+            this.Lbl_Message4.Location = new System.Drawing.Point(635, 239);
             this.Lbl_Message4.Name = "Lbl_Message4";
             this.Lbl_Message4.Size = new System.Drawing.Size(52, 21);
             this.Lbl_Message4.TabIndex = 20;
@@ -191,7 +168,7 @@ namespace PL.Pantalla
             // 
             this.Lbl_Message3.AutoSize = true;
             this.Lbl_Message3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.Lbl_Message3.Location = new System.Drawing.Point(616, 149);
+            this.Lbl_Message3.Location = new System.Drawing.Point(635, 151);
             this.Lbl_Message3.Name = "Lbl_Message3";
             this.Lbl_Message3.Size = new System.Drawing.Size(54, 22);
             this.Lbl_Message3.TabIndex = 19;
@@ -202,7 +179,7 @@ namespace PL.Pantalla
             // 
             this.Lbl_Message2.AutoSize = true;
             this.Lbl_Message2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Message2.Location = new System.Drawing.Point(175, 322);
+            this.Lbl_Message2.Location = new System.Drawing.Point(194, 324);
             this.Lbl_Message2.Name = "Lbl_Message2";
             this.Lbl_Message2.Size = new System.Drawing.Size(54, 22);
             this.Lbl_Message2.TabIndex = 17;
@@ -213,107 +190,18 @@ namespace PL.Pantalla
             // 
             this.Lbl_Message.AutoSize = true;
             this.Lbl_Message.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Message.Location = new System.Drawing.Point(175, 237);
+            this.Lbl_Message.Location = new System.Drawing.Point(194, 239);
             this.Lbl_Message.Name = "Lbl_Message";
             this.Lbl_Message.Size = new System.Drawing.Size(54, 22);
             this.Lbl_Message.TabIndex = 16;
             this.Lbl_Message.Text = "label7";
             this.Lbl_Message.Visible = false;
             // 
-            // Btn_Limpiar
-            // 
-            this.Btn_Limpiar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Btn_Limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.Btn_Limpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Limpiar.FlatAppearance.BorderSize = 0;
-            this.Btn_Limpiar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Limpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Limpiar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Limpiar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Limpiar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Limpiar.Image")));
-            this.Btn_Limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Limpiar.Location = new System.Drawing.Point(900, 270);
-            this.Btn_Limpiar.Name = "Btn_Limpiar";
-            this.Btn_Limpiar.Size = new System.Drawing.Size(213, 38);
-            this.Btn_Limpiar.TabIndex = 15;
-            this.Btn_Limpiar.Text = "Limpiar Campos";
-            this.Btn_Limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Limpiar.UseVisualStyleBackColor = false;
-            this.Btn_Limpiar.Click += new System.EventHandler(this.Btn_Limpiar_Click);
-            // 
-            // Btn_Eliminar
-            // 
-            this.Btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.Btn_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_Eliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Eliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Eliminar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Eliminar.Image")));
-            this.Btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Eliminar.Location = new System.Drawing.Point(900, 204);
-            this.Btn_Eliminar.Name = "Btn_Eliminar";
-            this.Btn_Eliminar.Size = new System.Drawing.Size(213, 38);
-            this.Btn_Eliminar.TabIndex = 14;
-            this.Btn_Eliminar.Text = "Eliminar Datos";
-            this.Btn_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Eliminar.UseVisualStyleBackColor = false;
-            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
-            // 
-            // Btn_Editar
-            // 
-            this.Btn_Editar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Btn_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.Btn_Editar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Editar.FlatAppearance.BorderSize = 0;
-            this.Btn_Editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Editar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Editar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Editar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Editar.Image")));
-            this.Btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Editar.Location = new System.Drawing.Point(900, 139);
-            this.Btn_Editar.Name = "Btn_Editar";
-            this.Btn_Editar.Size = new System.Drawing.Size(213, 38);
-            this.Btn_Editar.TabIndex = 13;
-            this.Btn_Editar.Text = "Modificar Datos";
-            this.Btn_Editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Editar.UseVisualStyleBackColor = false;
-            this.Btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
-            // 
-            // Btn_Guardar
-            // 
-            this.Btn_Guardar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Btn_Guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.Btn_Guardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Guardar.FlatAppearance.BorderSize = 0;
-            this.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Guardar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Guardar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guardar.Image")));
-            this.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Guardar.Location = new System.Drawing.Point(900, 71);
-            this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.Btn_Guardar.Name = "Btn_Guardar";
-            this.Btn_Guardar.Padding = new System.Windows.Forms.Padding(0, 0, 11, 0);
-            this.Btn_Guardar.Size = new System.Drawing.Size(213, 36);
-            this.Btn_Guardar.TabIndex = 12;
-            this.Btn_Guardar.Text = "Guardar Datos";
-            this.Btn_Guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Btn_Guardar.UseVisualStyleBackColor = false;
-            this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
-            // 
             // Telefono
             // 
             this.Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Telefono.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefono.Location = new System.Drawing.Point(620, 195);
+            this.Telefono.Location = new System.Drawing.Point(639, 197);
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(217, 26);
             this.Telefono.TabIndex = 10;
@@ -324,7 +212,7 @@ namespace PL.Pantalla
             // 
             this.Correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Correo.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Correo.Location = new System.Drawing.Point(620, 108);
+            this.Correo.Location = new System.Drawing.Point(639, 110);
             this.Correo.Name = "Correo";
             this.Correo.Size = new System.Drawing.Size(217, 26);
             this.Correo.TabIndex = 9;
@@ -334,7 +222,7 @@ namespace PL.Pantalla
             // 
             this.Apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Apellidos.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Apellidos.Location = new System.Drawing.Point(179, 282);
+            this.Apellidos.Location = new System.Drawing.Point(198, 284);
             this.Apellidos.Name = "Apellidos";
             this.Apellidos.Size = new System.Drawing.Size(209, 26);
             this.Apellidos.TabIndex = 8;
@@ -344,7 +232,7 @@ namespace PL.Pantalla
             // 
             this.Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Nombre.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre.Location = new System.Drawing.Point(179, 195);
+            this.Nombre.Location = new System.Drawing.Point(198, 197);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(209, 26);
             this.Nombre.TabIndex = 7;
@@ -354,7 +242,7 @@ namespace PL.Pantalla
             // 
             this.Cedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Cedula.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cedula.Location = new System.Drawing.Point(179, 108);
+            this.Cedula.Location = new System.Drawing.Point(198, 110);
             this.Cedula.Name = "Cedula";
             this.Cedula.Size = new System.Drawing.Size(209, 26);
             this.Cedula.TabIndex = 6;
@@ -364,7 +252,7 @@ namespace PL.Pantalla
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(477, 277);
+            this.label6.Location = new System.Drawing.Point(496, 279);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 32);
             this.label6.TabIndex = 5;
@@ -374,7 +262,7 @@ namespace PL.Pantalla
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(477, 190);
+            this.label5.Location = new System.Drawing.Point(496, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 32);
             this.label5.TabIndex = 4;
@@ -384,7 +272,7 @@ namespace PL.Pantalla
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(477, 103);
+            this.label4.Location = new System.Drawing.Point(496, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 32);
             this.label4.TabIndex = 3;
@@ -394,7 +282,7 @@ namespace PL.Pantalla
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 277);
+            this.label3.Location = new System.Drawing.Point(71, 279);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 32);
             this.label3.TabIndex = 2;
@@ -404,7 +292,7 @@ namespace PL.Pantalla
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 190);
+            this.label2.Location = new System.Drawing.Point(71, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 32);
             this.label2.TabIndex = 1;
@@ -414,11 +302,117 @@ namespace PL.Pantalla
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 103);
+            this.label1.Location = new System.Drawing.Point(71, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cédula:";
+            // 
+            // Btn_Reporte
+            // 
+            this.Btn_Reporte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Reporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_Reporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatAppearance.BorderSize = 0;
+            this.Btn_Reporte.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Reporte.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Reporte.ForeColor = System.Drawing.Color.White;
+            this.Btn_Reporte.Image = global::PL.Properties.Resources.icons8_document_32px;
+            this.Btn_Reporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Reporte.Location = new System.Drawing.Point(924, 324);
+            this.Btn_Reporte.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.Btn_Reporte.Name = "Btn_Reporte";
+            this.Btn_Reporte.Size = new System.Drawing.Size(248, 38);
+            this.Btn_Reporte.TabIndex = 23;
+            this.Btn_Reporte.Text = "Crear Reporte";
+            this.Btn_Reporte.UseVisualStyleBackColor = false;
+            this.Btn_Reporte.Click += new System.EventHandler(this.Btn_Reporte_Click);
+            // 
+            // Btn_Limpiar
+            // 
+            this.Btn_Limpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_Limpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Limpiar.FlatAppearance.BorderSize = 0;
+            this.Btn_Limpiar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Limpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Limpiar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Limpiar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Limpiar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Limpiar.Image")));
+            this.Btn_Limpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Limpiar.Location = new System.Drawing.Point(924, 257);
+            this.Btn_Limpiar.Name = "Btn_Limpiar";
+            this.Btn_Limpiar.Size = new System.Drawing.Size(248, 38);
+            this.Btn_Limpiar.TabIndex = 15;
+            this.Btn_Limpiar.Text = "Limpiar Campos";
+            this.Btn_Limpiar.UseVisualStyleBackColor = false;
+            this.Btn_Limpiar.Click += new System.EventHandler(this.Btn_Limpiar_Click);
+            // 
+            // Btn_Eliminar
+            // 
+            this.Btn_Eliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_Eliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Eliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Eliminar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Eliminar.Image")));
+            this.Btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Eliminar.Location = new System.Drawing.Point(924, 190);
+            this.Btn_Eliminar.Name = "Btn_Eliminar";
+            this.Btn_Eliminar.Size = new System.Drawing.Size(248, 38);
+            this.Btn_Eliminar.TabIndex = 14;
+            this.Btn_Eliminar.Text = "Eliminar Datos";
+            this.Btn_Eliminar.UseVisualStyleBackColor = false;
+            this.Btn_Eliminar.Click += new System.EventHandler(this.Btn_Eliminar_Click);
+            // 
+            // Btn_Editar
+            // 
+            this.Btn_Editar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_Editar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Editar.FlatAppearance.BorderSize = 0;
+            this.Btn_Editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Editar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Editar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Editar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Editar.Image")));
+            this.Btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Editar.Location = new System.Drawing.Point(924, 126);
+            this.Btn_Editar.Name = "Btn_Editar";
+            this.Btn_Editar.Size = new System.Drawing.Size(248, 38);
+            this.Btn_Editar.TabIndex = 13;
+            this.Btn_Editar.Text = "Modificar Datos";
+            this.Btn_Editar.UseVisualStyleBackColor = false;
+            this.Btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
+            // 
+            // Btn_Guardar
+            // 
+            this.Btn_Guardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_Guardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Guardar.FlatAppearance.BorderSize = 0;
+            this.Btn_Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Guardar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Guardar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Guardar.Image")));
+            this.Btn_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Guardar.Location = new System.Drawing.Point(924, 55);
+            this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(5, 3, 0, 3);
+            this.Btn_Guardar.Name = "Btn_Guardar";
+            this.Btn_Guardar.Size = new System.Drawing.Size(248, 36);
+            this.Btn_Guardar.TabIndex = 12;
+            this.Btn_Guardar.Text = "Guardar Datos";
+            this.Btn_Guardar.UseVisualStyleBackColor = false;
+            this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
             // 
             // usuariosBindingSource
             // 

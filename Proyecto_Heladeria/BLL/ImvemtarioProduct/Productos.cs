@@ -19,5 +19,19 @@ namespace BLL.ImvemtarioProduct
             return tblaUsuarios;
 
         }
+        public void InsertProducts(string Codigo, string product, string cantidad_Ingreso, string precioComp, string precioVent, string stock, string ingreso, string caducidad)
+        {
+            dtos.InsertRegistro(Convert.ToInt32(Codigo), product, Convert.ToInt32(cantidad_Ingreso), Convert.ToDouble(precioComp), Convert.ToDouble(precioVent),
+                                                Convert.ToInt32(stock),Convert.ToDateTime(ingreso), Convert.ToDateTime(caducidad));
+        }
+        public void EditProducts(string product, string cantidad_Ingreso, string precioComp, string precioVent, string stock, string ingreso, string caducidad, string Codigo)
+        {
+            dtos.EditRegistro(product, Convert.ToInt32(cantidad_Ingreso), Convert.ToDouble(precioComp), Convert.ToDouble(precioVent), Convert.ToInt32(stock), Convert.ToDateTime(ingreso),
+                                            Convert.ToDateTime(caducidad), Convert.ToInt32(Codigo));
+        }
+        public void EliminarProduct(string Codigo)
+        {
+            dtos.EliminarRegistro(Convert.ToInt32(Codigo));
+        }
     }
 }

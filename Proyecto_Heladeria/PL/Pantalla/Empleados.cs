@@ -169,14 +169,16 @@ namespace PL.Pantalla
         {
             if (Cedula.Text == "" || Nombre.Text == "" || Apellidos.Text == "" || Correo.Text == "" || Telefono.Text == "" || Cbo_Rol.Text == "")
             {
-                MessageBox.Show("No dejes Campos vacios, por favor");
+                MessageBox.Show("No dejes Campos vacios, por favor", "Warning message ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
 
                 if (Lbl_Message.ForeColor == Color.Red || Lbl_Message2.ForeColor == Color.Red || Lbl_Message3.ForeColor == Color.Red)
                 {
-                    MessageBox.Show("No se puede guardar los datos");
+                    MessageBox.Show("No se puede guardar los datos","Error message",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -187,10 +189,13 @@ namespace PL.Pantalla
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("No se pudo editar los datos" + ex);
+                        MessageBox.Show("No se pudo editar los datos" + ex, "Error message ",
+                        MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        
                     }
 
-                    MessageBox.Show("Datos Guardados, Exitosamente");
+                    MessageBox.Show("Datos Guardados, Exitosamente"," Information message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Tbl_Empleados();
                     LimpiarTxt();
                 }
@@ -209,7 +214,8 @@ namespace PL.Pantalla
             }
             else
             {
-                MessageBox.Show("Seleccione la fila que desea modificar");
+                MessageBox.Show("Seleccione la fila que desea modificar", "Information message ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void EliminarDtos()
@@ -220,13 +226,15 @@ namespace PL.Pantalla
                 Cedula.Text = DGV_Empleado.CurrentRow.Cells["Cedula"].Value.ToString();
                 MostrarDtosEmpleados eliminar = new MostrarDtosEmpleados();
                 eliminar.EliminarEmpleados(Cedula.Text);
-                MessageBox.Show("Eliminado Correctamente");
+                MessageBox.Show("Eliminado Correctamente", "Information message ",
+                        MessageBoxButtons.OK, MessageBoxIcon.None);
                 Tbl_Empleados();
                 LimpiarTxt();
             }
             else
             {
-                MessageBox.Show("Seleccione la fila que desea modificar");
+                MessageBox.Show("Seleccione la fila que desea modificar", "Information message ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
            
