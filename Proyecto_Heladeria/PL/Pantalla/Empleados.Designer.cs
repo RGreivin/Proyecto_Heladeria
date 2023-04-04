@@ -34,13 +34,21 @@ namespace PL.Pantalla
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.DGV_Empleado = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pContainer = new System.Windows.Forms.GroupBox();
+            this.pApellidos = new System.Windows.Forms.Panel();
+            this.pNombre = new System.Windows.Forms.Panel();
+            this.pCedula = new System.Windows.Forms.Panel();
+            this.Btn_Reporte = new System.Windows.Forms.Button();
             this.Cbo_Rol = new System.Windows.Forms.ComboBox();
             this.Lbl_Message0 = new System.Windows.Forms.Label();
             this.Lbl_Message4 = new System.Windows.Forms.Label();
             this.Lbl_Message3 = new System.Windows.Forms.Label();
             this.Lbl_Message2 = new System.Windows.Forms.Label();
             this.Lbl_Message = new System.Windows.Forms.Label();
+            this.Btn_Limpiar = new System.Windows.Forms.Button();
+            this.Btn_Eliminar = new System.Windows.Forms.Button();
+            this.Btn_Editar = new System.Windows.Forms.Button();
+            this.Btn_Guardar = new System.Windows.Forms.Button();
             this.Telefono = new System.Windows.Forms.TextBox();
             this.Correo = new System.Windows.Forms.TextBox();
             this.Apellidos = new System.Windows.Forms.TextBox();
@@ -52,14 +60,11 @@ namespace PL.Pantalla
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Btn_Reporte = new System.Windows.Forms.Button();
-            this.Btn_Limpiar = new System.Windows.Forms.Button();
-            this.Btn_Eliminar = new System.Windows.Forms.Button();
-            this.Btn_Editar = new System.Windows.Forms.Button();
-            this.Btn_Guardar = new System.Windows.Forms.Button();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pCorreo = new System.Windows.Forms.Panel();
+            this.pTelefono = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Empleado)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.pContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +75,7 @@ namespace PL.Pantalla
             this.DGV_Empleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HotTrack;
@@ -79,7 +84,7 @@ namespace PL.Pantalla
             this.DGV_Empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -92,41 +97,92 @@ namespace PL.Pantalla
             this.DGV_Empleado.Size = new System.Drawing.Size(1197, 477);
             this.DGV_Empleado.TabIndex = 0;
             // 
-            // groupBox1
+            // pContainer
             // 
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.Btn_Reporte);
-            this.groupBox1.Controls.Add(this.Cbo_Rol);
-            this.groupBox1.Controls.Add(this.Lbl_Message0);
-            this.groupBox1.Controls.Add(this.Lbl_Message4);
-            this.groupBox1.Controls.Add(this.Lbl_Message3);
-            this.groupBox1.Controls.Add(this.Lbl_Message2);
-            this.groupBox1.Controls.Add(this.Lbl_Message);
-            this.groupBox1.Controls.Add(this.Btn_Limpiar);
-            this.groupBox1.Controls.Add(this.Btn_Eliminar);
-            this.groupBox1.Controls.Add(this.Btn_Editar);
-            this.groupBox1.Controls.Add(this.Btn_Guardar);
-            this.groupBox1.Controls.Add(this.Telefono);
-            this.groupBox1.Controls.Add(this.Correo);
-            this.groupBox1.Controls.Add(this.Apellidos);
-            this.groupBox1.Controls.Add(this.Nombre);
-            this.groupBox1.Controls.Add(this.Cedula);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(0, 460);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1197, 411);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Información del Empleado";
+            this.pContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pContainer.Controls.Add(this.pTelefono);
+            this.pContainer.Controls.Add(this.pCorreo);
+            this.pContainer.Controls.Add(this.pApellidos);
+            this.pContainer.Controls.Add(this.pNombre);
+            this.pContainer.Controls.Add(this.pCedula);
+            this.pContainer.Controls.Add(this.Btn_Reporte);
+            this.pContainer.Controls.Add(this.Cbo_Rol);
+            this.pContainer.Controls.Add(this.Lbl_Message0);
+            this.pContainer.Controls.Add(this.Lbl_Message4);
+            this.pContainer.Controls.Add(this.Lbl_Message3);
+            this.pContainer.Controls.Add(this.Lbl_Message2);
+            this.pContainer.Controls.Add(this.Lbl_Message);
+            this.pContainer.Controls.Add(this.Btn_Limpiar);
+            this.pContainer.Controls.Add(this.Btn_Eliminar);
+            this.pContainer.Controls.Add(this.Btn_Editar);
+            this.pContainer.Controls.Add(this.Btn_Guardar);
+            this.pContainer.Controls.Add(this.Telefono);
+            this.pContainer.Controls.Add(this.Correo);
+            this.pContainer.Controls.Add(this.Apellidos);
+            this.pContainer.Controls.Add(this.Nombre);
+            this.pContainer.Controls.Add(this.Cedula);
+            this.pContainer.Controls.Add(this.label6);
+            this.pContainer.Controls.Add(this.label5);
+            this.pContainer.Controls.Add(this.label4);
+            this.pContainer.Controls.Add(this.label3);
+            this.pContainer.Controls.Add(this.label2);
+            this.pContainer.Controls.Add(this.label1);
+            this.pContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pContainer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pContainer.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pContainer.ForeColor = System.Drawing.Color.White;
+            this.pContainer.Location = new System.Drawing.Point(0, 460);
+            this.pContainer.Name = "pContainer";
+            this.pContainer.Size = new System.Drawing.Size(1197, 411);
+            this.pContainer.TabIndex = 1;
+            this.pContainer.TabStop = false;
+            this.pContainer.Text = "Información del Empleado";
+            // 
+            // pApellidos
+            // 
+            this.pApellidos.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pApellidos.Location = new System.Drawing.Point(198, 309);
+            this.pApellidos.Name = "pApellidos";
+            this.pApellidos.Size = new System.Drawing.Size(209, 5);
+            this.pApellidos.TabIndex = 26;
+            // 
+            // pNombre
+            // 
+            this.pNombre.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pNombre.Location = new System.Drawing.Point(198, 223);
+            this.pNombre.Name = "pNombre";
+            this.pNombre.Size = new System.Drawing.Size(209, 5);
+            this.pNombre.TabIndex = 25;
+            // 
+            // pCedula
+            // 
+            this.pCedula.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pCedula.Location = new System.Drawing.Point(198, 136);
+            this.pCedula.Name = "pCedula";
+            this.pCedula.Size = new System.Drawing.Size(209, 5);
+            this.pCedula.TabIndex = 24;
+            // 
+            // Btn_Reporte
+            // 
+            this.Btn_Reporte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Reporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_Reporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatAppearance.BorderSize = 0;
+            this.Btn_Reporte.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Reporte.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Reporte.ForeColor = System.Drawing.Color.White;
+            this.Btn_Reporte.Image = global::PL.Properties.Resources.icons8_document_32px;
+            this.Btn_Reporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Reporte.Location = new System.Drawing.Point(924, 324);
+            this.Btn_Reporte.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.Btn_Reporte.Name = "Btn_Reporte";
+            this.Btn_Reporte.Size = new System.Drawing.Size(248, 38);
+            this.Btn_Reporte.TabIndex = 23;
+            this.Btn_Reporte.Text = "Crear Reporte";
+            this.Btn_Reporte.UseVisualStyleBackColor = false;
+            this.Btn_Reporte.Click += new System.EventHandler(this.Btn_Reporte_Click);
             // 
             // Cbo_Rol
             // 
@@ -196,139 +252,6 @@ namespace PL.Pantalla
             this.Lbl_Message.TabIndex = 16;
             this.Lbl_Message.Text = "label7";
             this.Lbl_Message.Visible = false;
-            // 
-            // Telefono
-            // 
-            this.Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Telefono.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefono.Location = new System.Drawing.Point(639, 197);
-            this.Telefono.Name = "Telefono";
-            this.Telefono.Size = new System.Drawing.Size(217, 26);
-            this.Telefono.TabIndex = 10;
-            this.Telefono.TextChanged += new System.EventHandler(this.Telefono_TextChanged);
-            this.Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Telefono_KeyPress);
-            // 
-            // Correo
-            // 
-            this.Correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Correo.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Correo.Location = new System.Drawing.Point(639, 110);
-            this.Correo.Name = "Correo";
-            this.Correo.Size = new System.Drawing.Size(217, 26);
-            this.Correo.TabIndex = 9;
-            this.Correo.TextChanged += new System.EventHandler(this.Coreo_TextChanged);
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Apellidos.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Apellidos.Location = new System.Drawing.Point(198, 284);
-            this.Apellidos.Name = "Apellidos";
-            this.Apellidos.Size = new System.Drawing.Size(209, 26);
-            this.Apellidos.TabIndex = 8;
-            this.Apellidos.TextChanged += new System.EventHandler(this.Apellidos_TextChanged);
-            // 
-            // Nombre
-            // 
-            this.Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Nombre.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre.Location = new System.Drawing.Point(198, 197);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(209, 26);
-            this.Nombre.TabIndex = 7;
-            this.Nombre.TextChanged += new System.EventHandler(this.Nombre_TextChanged);
-            // 
-            // Cedula
-            // 
-            this.Cedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Cedula.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cedula.Location = new System.Drawing.Point(198, 110);
-            this.Cedula.Name = "Cedula";
-            this.Cedula.Size = new System.Drawing.Size(209, 26);
-            this.Cedula.TabIndex = 6;
-            this.Cedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cedula_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(496, 279);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 32);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Roles:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(496, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 32);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Teléfono:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(496, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 32);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Correo:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(71, 279);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 32);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Apellidos:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 32);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(71, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cédula:";
-            // 
-            // Btn_Reporte
-            // 
-            this.Btn_Reporte.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Btn_Reporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.Btn_Reporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Reporte.FlatAppearance.BorderSize = 0;
-            this.Btn_Reporte.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Reporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.Btn_Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Reporte.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Reporte.ForeColor = System.Drawing.Color.White;
-            this.Btn_Reporte.Image = global::PL.Properties.Resources.icons8_document_32px;
-            this.Btn_Reporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Reporte.Location = new System.Drawing.Point(924, 324);
-            this.Btn_Reporte.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.Btn_Reporte.Name = "Btn_Reporte";
-            this.Btn_Reporte.Size = new System.Drawing.Size(248, 38);
-            this.Btn_Reporte.TabIndex = 23;
-            this.Btn_Reporte.Text = "Crear Reporte";
-            this.Btn_Reporte.UseVisualStyleBackColor = false;
-            this.Btn_Reporte.Click += new System.EventHandler(this.Btn_Reporte_Click);
             // 
             // Btn_Limpiar
             // 
@@ -414,22 +337,159 @@ namespace PL.Pantalla
             this.Btn_Guardar.UseVisualStyleBackColor = false;
             this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
             // 
+            // Telefono
+            // 
+            this.Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Telefono.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefono.Location = new System.Drawing.Point(639, 197);
+            this.Telefono.Name = "Telefono";
+            this.Telefono.Size = new System.Drawing.Size(217, 26);
+            this.Telefono.TabIndex = 10;
+            this.Telefono.TextChanged += new System.EventHandler(this.Telefono_TextChanged);
+            this.Telefono.Enter += new System.EventHandler(this.Txt_Enter);
+            this.Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Telefono_KeyPress);
+            this.Telefono.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // Correo
+            // 
+            this.Correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Correo.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Correo.Location = new System.Drawing.Point(639, 110);
+            this.Correo.Name = "Correo";
+            this.Correo.Size = new System.Drawing.Size(217, 26);
+            this.Correo.TabIndex = 9;
+            this.Correo.TextChanged += new System.EventHandler(this.Coreo_TextChanged);
+            this.Correo.Enter += new System.EventHandler(this.Txt_Enter);
+            this.Correo.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Apellidos.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apellidos.Location = new System.Drawing.Point(198, 284);
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.Size = new System.Drawing.Size(209, 26);
+            this.Apellidos.TabIndex = 8;
+            this.Apellidos.TextChanged += new System.EventHandler(this.Apellidos_TextChanged);
+            this.Apellidos.Enter += new System.EventHandler(this.Txt_Enter);
+            this.Apellidos.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // Nombre
+            // 
+            this.Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Nombre.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre.Location = new System.Drawing.Point(198, 197);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(209, 26);
+            this.Nombre.TabIndex = 7;
+            this.Nombre.TextChanged += new System.EventHandler(this.Nombre_TextChanged);
+            this.Nombre.Enter += new System.EventHandler(this.Txt_Enter);
+            this.Nombre.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // Cedula
+            // 
+            this.Cedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Cedula.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cedula.Location = new System.Drawing.Point(198, 110);
+            this.Cedula.Name = "Cedula";
+            this.Cedula.Size = new System.Drawing.Size(209, 26);
+            this.Cedula.TabIndex = 6;
+            this.Cedula.Enter += new System.EventHandler(this.Txt_Enter);
+            this.Cedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cedula_KeyPress);
+            this.Cedula.Leave += new System.EventHandler(this.Txt_Leave);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(496, 279);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 32);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Roles:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(496, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 32);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Teléfono:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(496, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 32);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Correo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(71, 279);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 32);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Apellidos:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(71, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 32);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(71, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cédula:";
+            // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataMember = "Usuarios";
+            // 
+            // pCorreo
+            // 
+            this.pCorreo.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pCorreo.Location = new System.Drawing.Point(639, 136);
+            this.pCorreo.Name = "pCorreo";
+            this.pCorreo.Size = new System.Drawing.Size(217, 5);
+            this.pCorreo.TabIndex = 27;
+            // 
+            // pTelefono
+            // 
+            this.pTelefono.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pTelefono.Location = new System.Drawing.Point(639, 223);
+            this.pTelefono.Name = "pTelefono";
+            this.pTelefono.Size = new System.Drawing.Size(217, 5);
+            this.pTelefono.TabIndex = 28;
             // 
             // Empleados
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1197, 871);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pContainer);
             this.Controls.Add(this.DGV_Empleado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Empleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Empleado)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.pContainer.ResumeLayout(false);
+            this.pContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -437,7 +497,7 @@ namespace PL.Pantalla
 
         #endregion
         private System.Windows.Forms.DataGridView DGV_Empleado;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox pContainer;
         private System.Windows.Forms.TextBox Telefono;
         private System.Windows.Forms.TextBox Correo;
         private System.Windows.Forms.TextBox Apellidos;
@@ -463,5 +523,10 @@ namespace PL.Pantalla
         
         private System.Windows.Forms.ComboBox Cbo_Rol;
         private System.Windows.Forms.Button Btn_Reporte;
+        private System.Windows.Forms.Panel pCedula;
+        private System.Windows.Forms.Panel pApellidos;
+        private System.Windows.Forms.Panel pNombre;
+        private System.Windows.Forms.Panel pCorreo;
+        private System.Windows.Forms.Panel pTelefono;
     }
 }

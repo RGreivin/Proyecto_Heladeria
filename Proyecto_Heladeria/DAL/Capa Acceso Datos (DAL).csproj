@@ -45,6 +45,7 @@
     <Compile Include="ConexionBD\ConectarBD.cs" />
     <Compile Include="ConexionBD\RegistroDtosUser.cs" />
     <Compile Include="Empleados\DtosEmpleados.cs" />
+    <Compile Include="Facturacion\Factura.cs" />
     <Compile Include="InventarioProducts\InvProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiciosMail\Mail.cs" />

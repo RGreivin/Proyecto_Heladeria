@@ -19,6 +19,8 @@ namespace PL.Pantalla
         {
             InitializeComponent();
             Tbl_Empleados();
+            Cbo_Rol.Items.Insert(0, "Seleccione el rol");
+            Cbo_Rol.SelectedIndex = 0;
         }
         #region Eventos del sistema
         private void Cedula_KeyPress(object sender, KeyPressEventArgs e)
@@ -97,6 +99,7 @@ namespace PL.Pantalla
             Apellidos.Clear();
             Correo.Clear();
             Telefono.Clear();
+            Cbo_Rol.SelectedIndex = 0;
             Lbl_Message0.Visible = false;
             Lbl_Message.Visible = false;
             Lbl_Message2.Visible = false;
@@ -236,10 +239,6 @@ namespace PL.Pantalla
                 MessageBox.Show("Seleccione la fila que desea modificar", "Information message ",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-           
-
-
         }
         private void ReportEmpleados()
         {
@@ -247,7 +246,55 @@ namespace PL.Pantalla
             rport.ShowDialog();
         }
         #endregion
+        #region metodos handler del evento enter
+        //Este se da cuando el control esta activo
+        private void Txt_Enter(object sender, EventArgs e)
+        {
+            //Hace referencia al objeto que dispara el evento
+            //En este caso el textbox que esta activo
+            TextBox txt = sender as TextBox;
+            //Recorremos todos los controles que se encuentran dentro del panel
+            foreach (Control ctrl in pContainer.Controls)
+            {
+                /*
+                 * Si es un Panel y el nombre del Panel es "p"
+                 * concatenamos el name del textbox 
+                 */
+                if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
+                {
+                    ctrl.BackColor = Color.Gold;
+                }
+            }
+        }
+        private void Txt_Leave(object sender, EventArgs e)
+        {
+            //Hace referencia al objeto que dispara el evento
+            //En este caso el textbox que esta activo
+            TextBox txt = sender as TextBox;
 
-       
+            //Recorremos todos los controles que se encuentran dentro del panel
+            foreach (Control ctrl in pContainer.Controls)
+            {
+                /*
+                 * Si es un Panel y el nombre del Panel es "p"
+                 * concatenamos el name del textbox 
+                 */
+                if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
+                {
+                    if (txt.Text == string.Empty)
+                    {
+                        ctrl.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        ctrl.BackColor = Color.DarkGray;
+                    }
+                }
+            }
+        }
+
+        #endregion Fin metodos handler del evento enter
+
+      
     }
 }

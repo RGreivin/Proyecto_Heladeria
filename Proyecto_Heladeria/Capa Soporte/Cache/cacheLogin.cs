@@ -11,5 +11,8 @@ namespace Capa_Soporte.Cache
         public static string Nombre { get; set; }
         public static string Apellidos { get; set; }
         public static string Rol { get; set; }
+        public static string Nombre_Product {get; set;}
+        public static double Precio { get; set; }
+        
     }
 }

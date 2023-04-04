@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL.ImvemtarioProduct;
@@ -23,10 +24,67 @@ namespace PL.Pantalla
         }
 
         #region Evento del sistema
+        private void CodProduc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                Lbl_Message1.Text = "Solo se permiten números";
+                Lbl_Message1.Visible = true;
+                Lbl_Message1.ForeColor = Color.Yellow;
+            }
+        }
+        private void NombreProd_TextChanged(object sender, EventArgs e)
+        {
+            ValidarNombre();
+        }
+        private void CantIngreso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                Lbl_Message3.Text = "Solo se permiten números";
+                Lbl_Message3.Visible = true;
+                Lbl_Message3.ForeColor = Color.Yellow;
+            }
+        }
+        //Pienso en sumarle la cantidad a stock si esta vacio
         private void CantIngreso_TextChanged(object sender, EventArgs e)
         {
             Stock.Text = CantIngreso.Text;
 
+        }
+        private void PrecioCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                Lbl_Message4.Text = "Solo se permiten números";
+                Lbl_Message4.Visible = true;
+                Lbl_Message4.ForeColor = Color.Yellow;
+            }
+        }
+
+        private void PrecioVent_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                Lbl_Message5.Text = "Solo se permiten números";
+                Lbl_Message5.Visible = true;
+                Lbl_Message5.ForeColor = Color.Yellow;
+            }
+        }
+
+        private void Stock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                Lbl_Message6.Text = "Solo se permiten números";
+                Lbl_Message6.Visible = true;
+                Lbl_Message6.ForeColor = Color.Yellow;
+            }
         }
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
@@ -55,7 +113,22 @@ namespace PL.Pantalla
             Productos inv = new Productos();
             DGV_InventProduct.DataSource = inv.mostrarInvent();
         }
-        private void GuardarProductos()
+        private void ValidarNombre()
+        {
+            if (Regex.IsMatch(NombreProd.Text, @"^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$"))
+            {
+                Lbl_Message2.Text = "Nombre Correcto";
+                Lbl_Message2.Visible = true;
+                Lbl_Message2.ForeColor = Color.Green;
+            }
+            else
+            {
+                Lbl_Message2.Text = "Nombre Incorrecto";
+                Lbl_Message2.Visible = true;
+                Lbl_Message2.ForeColor = Color.Red;
+            }
+        }
+            private void GuardarProductos()
         {
             if (CodProduc.Text == " " || NombreProd.Text == "" || CantIngreso.Text == "" || PrecioCompra.Text == "" || PrecioVent.Text == "")
             {
@@ -92,7 +165,7 @@ namespace PL.Pantalla
                 {
                     Productos ins = new Productos();
                     ins.EditProducts(NombreProd.Text, CantIngreso.Text, PrecioCompra.Text, PrecioVent.Text, Stock.Text, Date_Ingreso.Text, Date_Caducidad.Text, CodProduc.Text);
-                    MessageBox.Show("Datos Guardados, Exitosamente", "Information message ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se edito el producto, Correctamente", "Information message ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Tbl_Invent();
                     edit = false;
                     LimpiarCampos();
@@ -112,6 +185,12 @@ namespace PL.Pantalla
             PrecioCompra.Clear();
             PrecioVent.Clear();
             Stock.Clear();
+            Lbl_Message1.Visible=false;  
+            Lbl_Message2.Visible = false;
+            Lbl_Message3.Visible = false;
+            Lbl_Message4.Visible = false;
+            Lbl_Message5.Visible = false;
+            Lbl_Message6.Visible = false;
 
         }
         private void ModificarProduct()
@@ -152,15 +231,63 @@ namespace PL.Pantalla
                 MessageBox.Show("Seleccione la fila que desea eliminar", "Warning message ",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
+            CodProduc.Enabled = true;
         }
-
-        #endregion Termina Los Metodos Genericos 
         private void ReporteProducts()
         {
             Pantalla.Reporte_Productos rport = new Reporte_Productos();
             rport.ShowDialog();
         }
+        #endregion Termina Los Metodos Genericos 
+
+        #region metodos handler del evento enter
+        //Este se da cuando el control esta activo
+        private void Txt_Enter(object sender, EventArgs e)
+        {
+            //Hace referencia al objeto que dispara el evento
+            //En este caso el textbox que esta activo
+            TextBox txt = sender as TextBox;
+            //Recorremos todos los controles que se encuentran dentro del panel
+            foreach (Control ctrl in pContainer.Controls)
+            {
+                /*
+                 * Si es un Panel y el nombre del Panel es "p"
+                 * concatenamos el name del textbox 
+                 */
+                if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
+                {
+                    ctrl.BackColor = Color.Gold;
+                }
+            }
+        }
+        private void Txt_Leave(object sender, EventArgs e)
+        {
+            //Hace referencia al objeto que dispara el evento
+            //En este caso el textbox que esta activo
+            TextBox txt = sender as TextBox;
+
+            //Recorremos todos los controles que se encuentran dentro del panel
+            foreach (Control ctrl in pContainer.Controls)
+            {
+                /*
+                 * Si es un Panel y el nombre del Panel es "p"
+                 * concatenamos el name del textbox 
+                 */
+                if (ctrl is Panel && ctrl.Name == "p" + txt.Name)
+                {
+                    if (txt.Text == string.Empty)
+                    {
+                        ctrl.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        ctrl.BackColor = Color.DarkGray;
+                    }
+                }
+            }
+        }
+
+        #endregion Fin metodos handler del evento enter
 
     }
 

@@ -70,7 +70,7 @@ namespace PL.Pantalla
         }
         private void Btn_Ventas_Click(object sender, EventArgs e)
         {
-            //AbrirForm(new InventProducts());
+            AbrirForm(new Ventas());
         }
         #endregion Finaliza los metodos del sistema
 
