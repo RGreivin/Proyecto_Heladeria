@@ -60,7 +60,7 @@ namespace PL.Pantalla
             this.label19 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.Btn_buscar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Btn_QuitarProd = new System.Windows.Forms.Button();
             this.Btn_Add = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.Precio = new System.Windows.Forms.TextBox();
@@ -97,7 +97,7 @@ namespace PL.Pantalla
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.Btn_buscar);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.Btn_QuitarProd);
             this.groupBox1.Controls.Add(this.Btn_Add);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.Precio);
@@ -460,22 +460,23 @@ namespace PL.Pantalla
             this.Btn_buscar.UseVisualStyleBackColor = true;
             this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
-            // button2
+            // Btn_QuitarProd
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button2.Image = global::PL.Properties.Resources.icons8_clear_shopping_cart_32px;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(241, 441);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 47);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Quitar Producto";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Btn_QuitarProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_QuitarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_QuitarProd.FlatAppearance.BorderSize = 0;
+            this.Btn_QuitarProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_QuitarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_QuitarProd.ForeColor = System.Drawing.Color.Cornsilk;
+            this.Btn_QuitarProd.Image = global::PL.Properties.Resources.icons8_clear_shopping_cart_32px;
+            this.Btn_QuitarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_QuitarProd.Location = new System.Drawing.Point(241, 441);
+            this.Btn_QuitarProd.Name = "Btn_QuitarProd";
+            this.Btn_QuitarProd.Size = new System.Drawing.Size(217, 47);
+            this.Btn_QuitarProd.TabIndex = 11;
+            this.Btn_QuitarProd.Text = "Quitar Producto";
+            this.Btn_QuitarProd.UseVisualStyleBackColor = false;
+            this.Btn_QuitarProd.Click += new System.EventHandler(this.Btn_QuitarProd_Click);
             // 
             // Btn_Add
             // 
@@ -684,7 +685,7 @@ namespace PL.Pantalla
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Cod;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Btn_QuitarProd;
         private System.Windows.Forms.DataGridView DGV_Lista;
         private System.Windows.Forms.Button Btn_buscar;
         private System.Windows.Forms.Button button4;

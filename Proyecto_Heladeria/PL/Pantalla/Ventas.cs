@@ -64,6 +64,10 @@ namespace PL.Pantalla
         {
             CargarList();
         }
+        private void Btn_QuitarProd_Click(object sender, EventArgs e)
+        {
+            Quitar_Product();
+        }
         private void Btn_Limpiar_Click(object sender, EventArgs e)
         {
             LimpiarCamp();
@@ -72,6 +76,7 @@ namespace PL.Pantalla
         {
             Vender();
         }
+
 
         #endregion Termina los metodos del sistema
 
@@ -167,6 +172,40 @@ namespace PL.Pantalla
                 Lbl_Devolucion.Text = "0.00" ;
             }
         }
+        private void Quitar_Product()
+        {
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Deseas Eliminar El Producto?",
+                    "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (respuesta == DialogResult.Yes)
+                {
+                    DGV_Lista.Rows.Remove(DGV_Lista.CurrentRow);
+                    float CostoTotal = 0;
+                    int conteo = 0;
+
+                    conteo = DGV_Lista.RowCount;
+                    for (int i = 0; i < conteo; i++)
+                    {
+                        CostoTotal -= float.Parse(DGV_Lista.Rows[i].Cells[4].Value.ToString());
+                    }
+                    Lbl_CostApgar.Text = CostoTotal.ToString();
+                }
+                else
+                {
+                    if (DGV_Lista == null)
+                    {
+                        Btn_Vender.Enabled = true;
+                    }
+                }
+            }
+            catch 
+            {
+
+            }
+          
+          
+         }
         private void Vender()
         {
             Cls_Funciones.CreaTicket Ticket1 = new Cls_Funciones.CreaTicket();
@@ -230,6 +269,7 @@ namespace PL.Pantalla
             Lbl_CostApgar.Text =Lbl_Devolucion.Text = Lbl_Subtotal.Text = "0.00";
             MessageBox.Show("Gracias por preferirnos");
         }
+
 
         #endregion Termina Los Metodos Genericos
 
