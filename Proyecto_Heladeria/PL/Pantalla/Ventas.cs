@@ -18,6 +18,7 @@ namespace PL.Pantalla
         public Ventas()
         {
             InitializeComponent();
+            MostrarNoFact();
         }
         string  [,] ListaVenta= new string[200,6];
         int fila = 0;
@@ -82,6 +83,11 @@ namespace PL.Pantalla
 
         #region Metodos Genericos
 
+        private void MostrarNoFact()
+        {
+            DtosFactura noFact = new DtosFactura();
+            Lbl_NumbFact.Text = noFact.consultFactura();
+        }
         private void Buscar_Prod()
         {
             DtosFactura dtos = new DtosFactura();

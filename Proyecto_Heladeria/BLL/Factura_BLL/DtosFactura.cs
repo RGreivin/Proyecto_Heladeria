@@ -11,6 +11,11 @@ namespace BLL.Factura_BLL
         private Factura fact= new Factura();
 
         //instanciamos al objeto de acceso dtos de usuario
+
+        public string consultFactura()
+        {
+            return fact.MostrarNoFact();
+        }
         public bool Buscar_Product(string cod)
         {
             return fact.BuscarProduct(Convert.ToInt32(cod));

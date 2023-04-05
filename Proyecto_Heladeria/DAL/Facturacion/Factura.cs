@@ -13,7 +13,29 @@ namespace DAL.Facturacion
         private ConexionBD.ConectarBD conexion = new ConexionBD.ConectarBD();
         SqlCommand comand = new SqlCommand();
         //Lee datos de la fila  de la tabla productos
-    
+
+        public string MostrarNoFact()
+        {
+            comand.Connection = conexion.AbrirConexion();
+            comand.CommandText = "No_Factura";
+            comand.CommandType = CommandType.StoredProcedure;
+            SqlDataReader rd = comand.ExecuteReader();
+            
+
+            if (rd.Read())
+            {
+                return rd["Id_Factura"].ToString();
+
+            }
+            else
+            {
+                return "Null";
+
+            }
+
+
+        }
+
         public bool BuscarProduct(int cod)
         {
             comand.Connection = conexion.AbrirConexion();
