@@ -296,6 +296,7 @@
     <None Include="Img\icons8-busca-mas-32.png" />
     <None Include="Img\icons8_shopping_cart_32px.png" />
     <None Include="Img\icons8_check_32px.png" />
+    <None Include="Img\icons8_money_32px_5.png" />
     <Content Include="Img\MicrosoftTeams-image %2810%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

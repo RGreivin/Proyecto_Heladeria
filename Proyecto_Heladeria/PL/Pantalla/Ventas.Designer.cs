@@ -29,10 +29,13 @@ namespace PL.Pantalla
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Btn_cambio = new System.Windows.Forms.Button();
+            this.Rb_Tarjeta = new System.Windows.Forms.RadioButton();
+            this.Rb_Efectivo = new System.Windows.Forms.RadioButton();
             this.Lbl_Message3 = new System.Windows.Forms.Label();
             this.Efectivo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -58,7 +61,7 @@ namespace PL.Pantalla
             this.Lbl_Subtotal = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Btn_NuevaCompra = new System.Windows.Forms.Button();
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Btn_QuitarProd = new System.Windows.Forms.Button();
             this.Btn_Add = new System.Windows.Forms.Button();
@@ -95,7 +98,7 @@ namespace PL.Pantalla
             this.groupBox1.Controls.Add(this.Lbl_Message2);
             this.groupBox1.Controls.Add(this.Lbl_Message1);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.Btn_NuevaCompra);
             this.groupBox1.Controls.Add(this.Btn_buscar);
             this.groupBox1.Controls.Add(this.Btn_QuitarProd);
             this.groupBox1.Controls.Add(this.Btn_Add);
@@ -122,22 +125,63 @@ namespace PL.Pantalla
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.Btn_cambio);
+            this.groupBox3.Controls.Add(this.Rb_Tarjeta);
+            this.groupBox3.Controls.Add(this.Rb_Efectivo);
             this.groupBox3.Controls.Add(this.Lbl_Message3);
             this.groupBox3.Controls.Add(this.Efectivo);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.groupBox3.Location = new System.Drawing.Point(378, 161);
+            this.groupBox3.Location = new System.Drawing.Point(378, 148);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(409, 227);
+            this.groupBox3.Size = new System.Drawing.Size(367, 242);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tipo de pago";
+            // 
+            // Btn_cambio
+            // 
+            this.Btn_cambio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_cambio.Image = global::PL.Properties.Resources.icons8_money_32px_5;
+            this.Btn_cambio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_cambio.Location = new System.Drawing.Point(103, 82);
+            this.Btn_cambio.Name = "Btn_cambio";
+            this.Btn_cambio.Size = new System.Drawing.Size(193, 45);
+            this.Btn_cambio.TabIndex = 5;
+            this.Btn_cambio.Text = "Cambio de pago";
+            this.Btn_cambio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btn_cambio.UseVisualStyleBackColor = true;
+            this.Btn_cambio.Click += new System.EventHandler(this.Btn_cambio_Click);
+            // 
+            // Rb_Tarjeta
+            // 
+            this.Rb_Tarjeta.AutoSize = true;
+            this.Rb_Tarjeta.Location = new System.Drawing.Point(230, 44);
+            this.Rb_Tarjeta.Name = "Rb_Tarjeta";
+            this.Rb_Tarjeta.Size = new System.Drawing.Size(85, 28);
+            this.Rb_Tarjeta.TabIndex = 4;
+            this.Rb_Tarjeta.TabStop = true;
+            this.Rb_Tarjeta.Text = "Tarjeta";
+            this.Rb_Tarjeta.UseVisualStyleBackColor = true;
+            this.Rb_Tarjeta.CheckedChanged += new System.EventHandler(this.Rb_Tarjeta_CheckedChanged);
+            // 
+            // Rb_Efectivo
+            // 
+            this.Rb_Efectivo.AutoSize = true;
+            this.Rb_Efectivo.Location = new System.Drawing.Point(80, 44);
+            this.Rb_Efectivo.Name = "Rb_Efectivo";
+            this.Rb_Efectivo.Size = new System.Drawing.Size(94, 28);
+            this.Rb_Efectivo.TabIndex = 3;
+            this.Rb_Efectivo.TabStop = true;
+            this.Rb_Efectivo.Text = "Efectivo";
+            this.Rb_Efectivo.UseVisualStyleBackColor = true;
+            this.Rb_Efectivo.CheckedChanged += new System.EventHandler(this.Rb_Efectivo_CheckedChanged);
             // 
             // Lbl_Message3
             // 
             this.Lbl_Message3.AutoSize = true;
             this.Lbl_Message3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Message3.Location = new System.Drawing.Point(83, 191);
+            this.Lbl_Message3.Location = new System.Drawing.Point(76, 213);
             this.Lbl_Message3.Name = "Lbl_Message3";
             this.Lbl_Message3.Size = new System.Drawing.Size(60, 20);
             this.Lbl_Message3.TabIndex = 2;
@@ -146,7 +190,7 @@ namespace PL.Pantalla
             // 
             // Efectivo
             // 
-            this.Efectivo.Location = new System.Drawing.Point(115, 150);
+            this.Efectivo.Location = new System.Drawing.Point(118, 175);
             this.Efectivo.Name = "Efectivo";
             this.Efectivo.Size = new System.Drawing.Size(155, 29);
             this.Efectivo.TabIndex = 1;
@@ -157,7 +201,7 @@ namespace PL.Pantalla
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(143, 117);
+            this.label8.Location = new System.Drawing.Point(149, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 25);
             this.label8.TabIndex = 0;
@@ -426,22 +470,23 @@ namespace PL.Pantalla
             this.label19.TabIndex = 23;
             this.label19.Text = "Sub-Total";
             // 
-            // button4
+            // Btn_NuevaCompra
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button4.Image = global::PL.Properties.Resources.icons8_shopping_cart_32px;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(442, 441);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(218, 47);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Nueva Compra";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Btn_NuevaCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.Btn_NuevaCompra.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_NuevaCompra.FlatAppearance.BorderSize = 0;
+            this.Btn_NuevaCompra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(174)))));
+            this.Btn_NuevaCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_NuevaCompra.ForeColor = System.Drawing.Color.Cornsilk;
+            this.Btn_NuevaCompra.Image = global::PL.Properties.Resources.icons8_shopping_cart_32px;
+            this.Btn_NuevaCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_NuevaCompra.Location = new System.Drawing.Point(442, 441);
+            this.Btn_NuevaCompra.Name = "Btn_NuevaCompra";
+            this.Btn_NuevaCompra.Size = new System.Drawing.Size(218, 47);
+            this.Btn_NuevaCompra.TabIndex = 13;
+            this.Btn_NuevaCompra.Text = "Nueva Compra";
+            this.Btn_NuevaCompra.UseVisualStyleBackColor = false;
+            this.Btn_NuevaCompra.Click += new System.EventHandler(this.Btn_NuevaCompra_Click);
             // 
             // Btn_buscar
             // 
@@ -580,14 +625,14 @@ namespace PL.Pantalla
             this.DGV_Lista.AllowUserToDeleteRows = false;
             this.DGV_Lista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_Lista.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Lista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Lista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DGV_Lista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Lista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -595,14 +640,14 @@ namespace PL.Pantalla
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Lista.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Lista.DefaultCellStyle = dataGridViewCellStyle6;
             this.DGV_Lista.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DGV_Lista.Location = new System.Drawing.Point(0, 510);
             this.DGV_Lista.Name = "DGV_Lista";
@@ -688,7 +733,7 @@ namespace PL.Pantalla
         private System.Windows.Forms.Button Btn_QuitarProd;
         private System.Windows.Forms.DataGridView DGV_Lista;
         private System.Windows.Forms.Button Btn_buscar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Btn_NuevaCompra;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label26;
@@ -719,5 +764,8 @@ namespace PL.Pantalla
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button Btn_cambio;
+        private System.Windows.Forms.RadioButton Rb_Tarjeta;
+        private System.Windows.Forms.RadioButton Rb_Efectivo;
     }
 }

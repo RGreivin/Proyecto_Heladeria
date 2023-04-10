@@ -78,7 +78,66 @@ namespace PL.Pantalla
             Vender();
         }
 
+        private void Btn_cambio_Click(object sender, EventArgs e)
+        {
+            cal_Reinicio();
+            if (Rb_Efectivo.Checked)
+            {
+                Rb_Efectivo.Enabled = false;
+                Rb_Tarjeta.Enabled = true;
+                efectivo();
+            }
+            else
+            {
+                Rb_Efectivo.Enabled = true;
+                Rb_Tarjeta.Enabled = false;
+                tarjeta();
+                Efectivo.Clear();
+            }
+            MessageBox.Show("Seleccione el nuevo tipo de pago");
+            Btn_Add.Enabled = false;
+        }
 
+        private void Rb_Efectivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Rb_Efectivo.Checked)
+            {
+                Rb_Efectivo.Enabled = true;
+                Rb_Tarjeta.Enabled = false;
+                efectivo();
+                Btn_Add.Enabled = false;
+
+
+            }
+            else
+            {
+                MessageBox.Show("Pago Tarjeta");
+            }
+        }
+
+        private void Rb_Tarjeta_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Rb_Tarjeta.Checked)
+            {
+                Rb_Efectivo.Enabled = false;
+                Rb_Tarjeta.Enabled = true;
+                tarjeta();
+                Btn_Add.Enabled = false;
+                Efectivo.Text = "0";
+            }
+            else
+            {
+                MessageBox.Show("Pago Efectivo");
+            }
+        }
+        private void Btn_NuevaCompra_Click(object sender, EventArgs e)
+        {
+            Rb_Efectivo.Checked = false;
+            Rb_Tarjeta.Checked = false;
+            Rb_Efectivo.Enabled = true;
+            Rb_Tarjeta.Enabled = true;
+            Btn_Add.Enabled = true;
+        }
         #endregion Termina los metodos del sistema
 
         #region Metodos Genericos
@@ -127,6 +186,7 @@ namespace PL.Pantalla
             Lbl_Message1.Visible = false;
             Lbl_Message2.Visible = false;
             Lbl_Message3.Visible =false;
+            Lbl_IVA.Text = "0.00" ;
         }
 
 
@@ -242,9 +302,9 @@ namespace PL.Pantalla
 
             Cls_Funciones.CreaTicket.LineasGuion();
 
-            Ticket1.AgregaTotales("Sub-Total", double.Parse("0")); // imprime linea con Subtotal
+            Ticket1.AgregaTotales("Sub-Total", double.Parse(Lbl_Subtotal.Text)); // imprime linea con Subtotal
             Ticket1.AgregaTotales("Descuento", double.Parse("0")); // imprime linea con decuento total
-            Ticket1.AgregaTotales("IVA", double.Parse("0"));
+            Ticket1.AgregaTotales("IVA", double.Parse(Lbl_IVA.Text));
             Ticket1.TextoIzquierda(" ");
             Ticket1.AgregaTotales("Total", double.Parse(Lbl_CostApgar.Text)); // imprime linea con total
             Ticket1.TextoIzquierda(" ");
@@ -276,9 +336,61 @@ namespace PL.Pantalla
             MessageBox.Show("Gracias por preferirnos");
         }
 
+        public void efectivo()
+        {
+            double result = 0;
+            double iva = 0;
+            float costoTotal = 0;
+            int conteo = 0;
+            conteo = DGV_Lista.RowCount;
+            for (int i = 0; i < conteo; i++)
+            {
+                costoTotal += float.Parse(DGV_Lista.Rows[i].Cells[4].Value.ToString());
+            }
+            Lbl_Subtotal.Text = costoTotal.ToString();
+            iva = double.Parse(Lbl_Subtotal.Text) * 0.13;
+            Lbl_IVA.Text = Convert.ToString(iva);
+            result = double.Parse(Lbl_Subtotal.Text);
+            Lbl_CostApgar.Text = Convert.ToString(result);
+        }
+        public void tarjeta()
+        {
+            double result = 0;
+            double iva = 0;
+            float costoTotal = 0;
+            int conteo = 0;
+            conteo = DGV_Lista.RowCount;
+            for (int i = 0; i < conteo; i++)
+            {
+                costoTotal += float.Parse(DGV_Lista.Rows[i].Cells[4].Value.ToString());
+            }
+            Lbl_Subtotal.Text = costoTotal.ToString();
+            iva = double.Parse(Lbl_Subtotal.Text) * 0.13;
+            Lbl_IVA.Text = Convert.ToString(iva);
+            result = double.Parse(Lbl_Subtotal.Text);
+            Lbl_CostApgar.Text = Convert.ToString(result);
+            //Txt_Efect.Text = Convert.ToDouble(Lbl_CostApgar.Text).ToString();
+             Efectivo.Text = "0.00";
+
+        }
+        public void cal_Reinicio()
+        {
+            float imp = 0;
+            float costoTotal = 0;
+            int conteo = 0;
+            conteo = DGV_Lista.RowCount;
+            for (int i = 0; i < conteo; i++)
+            {
+                costoTotal += float.Parse(DGV_Lista.Rows[i].Cells[4].Value.ToString());
+            }
+            Lbl_CostApgar.Text = Convert.ToString(costoTotal);
+            Lbl_IVA.Text = Convert.ToString(imp);
+        }
+
+
 
         #endregion Termina Los Metodos Genericos
 
-       
+      
     }
 }
